@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="/static/style.css">
+    <title>Home page</title>
+</head>
+<body>
+  
+    </head>
+    <body class="bruh">
+    
+    <div class="header">
+      <h1>Vocational Guidance</h1>
+    </div>
+    
+    <div class="topnav">
+      <a href="{{url_for('index')}}">Home</a>
+      <a href="{{url_for('contact')}}">Contact</a>
+      <a href ="{{url_for('intro')}}"> Intro</a>
+        
+
+    </div>
+   
+    
+    
+      <script>
+ window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
+      </script>
+      <p class="intro"><centre>If you want to know your future job,welcome to</centre> </p>
+      <p class="a">  VOCATIONAL GUIDANCE</p>
+        <a href="{{url_for('take_test2')}}">
+          <button class="test" >Take the test </button>
+        </a>
+
+  
+</body>
+</html>
