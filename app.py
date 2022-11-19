@@ -1,22 +1,28 @@
-#create virtualenv first 
-
 from crypt import methods
 import re
-from flask import Flask, render_template, Response, make_response, redirect, url_for, request
+from flask import Flask, render_template, Response, make_response, redirect, url_for, request #create virtualenv to install Flask
 import numpy as np
 from tensorflow import keras
-
+from flask_mysqldb import MySQL #pip install flask_mysqldb
 Labels=['ENFJ', 'ENFP' , 'ENTJ' , 'ENTP' , 'ESFJ' , 'ESFP', 'ESTJ', 'ESTP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ', 'ISFP', 'ISTJ', 'ISTP']
 
 app = Flask(__name__)
 model = keras.models.load_model(r'WEB-FOR-REAL-main/models/final.h5') # copy relative path
+#connecting to mysql server
+app.config['MYSQL_HOST'] = '123.20.96.122'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'Lmao!123'
+app.config['MYSQL_DB'] = 'flask'
+mysql = MySQL(app)
+
+
 
 @app.route('/')  # homepage
 def index():
     return render_template('homepage.html')
 
 
-@app.route('/contact')
+@app.route('/contact') #contact
 def contact():
     return render_template('contact.html')
 
@@ -24,9 +30,7 @@ def contact():
 def intro():
     return render_template('intro.html')
 
-@app.route('/test', methods = ['POST', 'GET'])  
-def take_test():
-    return render_template('test1.html')
+
 
 @app.route('/test2', methods = ['POST', 'GET']) 
 def take_test2():
@@ -647,7 +651,20 @@ def predict():
         return jobs
     jobs = predictor(result)
     return render_template('result.html', prediction_text= 'Your personality type should be {}'.format(result), jobs=jobs)
-    
+
+@app.route('/stor', methods = ['POST', 'GET']) #store data
+def login(): #in progress
+    if request.method == 'GET':
+        return "Login via the login Form"
+     
+    if request.method == 'POST':
+        question1 = request.form['question1']
+        question2 = request.form['question2']
+        cursor = mysql.connection.cursor()
+        cursor.execute(''' INSERT INTO info_table VALUES(%s,%s)''',(question1,question2))
+        mysql.connection.commit()
+        cursor.close()
+        return f"Done!!"
 
 
 
