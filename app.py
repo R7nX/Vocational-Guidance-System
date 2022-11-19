@@ -47,7 +47,7 @@ def predict():
     features = features.reshape(1, -1)
     prediction = model.predict(features) #probability of 16 groups 
     result=Labels[np.argmax(prediction)] #personality type
-    def predictor(prediction):    
+    def predictor(prediction): #listing temporary career groups(wait for career's list of teacher)
         if Labels[np.argmax(prediction)]=='ENFJ':
             jobs = """  
         Quảng cáo
