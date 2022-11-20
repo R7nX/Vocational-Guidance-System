@@ -3,7 +3,7 @@ html, body {
   overflow-x: hidden;
 }
 .bruh{
-  background-image: url(cover1.jpg);
+  background-image: url(cover.jpg);
   background-size: contain;
   width: 1920px;
   height: 1080px;
@@ -97,7 +97,10 @@ html, body {
       font-size:20px
     }
     .phone{
-      background-color: #f1f1f1;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size:20px
+    }
+    .dev{
       font-family: Arial, Helvetica, sans-serif;
       font-size:20px
     }
