@@ -10,8 +10,7 @@ Labels=['ENFJ', 'ENFP' , 'ENTJ' , 'ENTP' , 'ESFJ' , 'ESFP', 'ESTJ', 'ESTP', 'INF
 app = Flask(__name__)
 model = keras.models.load_model(r'WEB-FOR-REAL-main/models/final.h5') # copy relative path
 # connecting to mysql server
-# db=yaml.load(open('db.yaml')) 
-with open(r'db.yaml') as file:
+with open(r'db.yaml') as file: #copy relative path
     db=yaml.load(file, Loader=yaml.FullLoader)
 
 # app.config['MYSQL_HOST'] = db['mysql_host']
