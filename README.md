@@ -13,11 +13,12 @@ This project is an attempt to creating a system which help student find ther mat
 
 
 ## Setup
-&#9888; Please remember to check that the paths are correct to your system.
+&#9888; Please remember to check that the paths are correct to your system, and put db.yaml file outside the folder.
 To run the project, you must first install the [requirements file](requirements.txt)
 ```
 pip install -r requirements.txt
 ```
+
 
 To start the application, run the [app.py](app.py) file. 
 ## Contribution
