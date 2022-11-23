@@ -22,3 +22,12 @@ pip install -r requirements.txt
 
 To start the application, run the [app.py](app.py) file. 
 ## Contribution
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+## Contact
+Ryan - [baokhanh0514@gmail.com](mailto:baokhanh0514@gmail.com)
+
+## License
+Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License. See [LICENSE.txt](LISCENSE.txt) for more information.
+
