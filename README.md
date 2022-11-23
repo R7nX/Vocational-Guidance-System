@@ -28,6 +28,10 @@ to discuss what you would like to change.
 ## Contact
 Ryan - [baokhanh0514@gmail.com](mailto:baokhanh0514@gmail.com)
 
+Jerry - [Nguyenleminhthien27092005@gmail.com](mailto:Nguyenleminhthien27092005@gmail.com)
+
+James - [promaster30525@gmail.com](mailto:promaster30525@gmail.com)
+
 ## License
 Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License. See [LICENSE.txt](LISCENSE.txt) for more information.
 
