@@ -1,0 +1,1040 @@
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel = "stylesheet" href="/static/style.css"> 
+<title>Take test</title> 
+</head>
+<body>
+</head>
+<body class="bruh">
+
+<div class="header">
+<h1>Vocational Guidance</h1>
+</div>
+
+<div class="topnav">
+   <a href="{{url_for('index')}}">Home</a>
+   <a href="{{url_for('contact')}}">Contact</a>
+   <a href ="{{url_for('intro')}}"> Intro</a>
+</div> 
+
+      <script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+   document.getElementById("navbar").style.top = "0";
+} else {
+document.getElementById("navbar").style.top = "-50px";
+}
+}</script> 
+
+<form>
+<form action="/predict" method= "post"></form>
+   <label for="lang-switch">
+      <span lang="vie">Ngôn ngữ</span>
+      <span lang="en">Language</span>
+   </label>
+   <select id="lang-switch">
+      <option value="en">English</option>
+      <option value="vie" selected>Tiếng Việt</option>
+   </select>
+</form>
+<p>
+<span lang="vie"> 
+      Bạn thường làm quen được nhiều bạn mới.<br>
+            <input type = "radio" name="question1" value = -3 > -3
+            <input type = "radio" name="question1" value = -2 > -2
+            <input type = "radio" name="question1" value = -1 > -1
+            <input type = "radio" name="question1" value = 0 > 0
+            <input type = "radio" name="question1" value = 1 > 1
+            <input type = "radio" name="question1" value = 2 > 1
+            <input type = "radio" name="question1" value = 3> 3<br>
+      Bạn dành nhiều thời gian để khám phá những chủ đề mới lạ khơi gợi cho bạn nhiều hứng thú.<br>
+            <input type = "radio" name="question2" value = -3 >-3
+            <input type = "radio" name="question2" value = -2 >-2
+            <input type = "radio" name="question2" value = -1 >-1
+            <input type = "radio" name="question2" value = 0 >0
+            <input type = "radio" name="question2" value = 1 >1
+            <input type = "radio" name="question2" value = 2 >2
+            <input type = "radio" name="question2" value = 3 >3 <br>
+      Bạn cũng thấy muốn khóc khi nhìn người khác bật khóc <br>
+            <input type = "radio" name="question3" value = -3 >-3
+            <input type = "radio" name="question3" value = -2 >-2
+            <input type = "radio" name="question3" value = -1 >-1
+            <input type = "radio" name="question3" value = 0 >0
+            <input type = "radio" name="question3" value = 1 >1
+            <input type = "radio" name="question3" value = 2 >2
+            <input type = "radio" name="question3" value = 3 >3 <br>
+      Bạn thường có kế hoạch dự phòng.<br>
+            <input type = "radio" name="question4" value = -3 >-3
+            <input type = "radio" name="question4" value = -2 >-2
+            <input type = "radio" name="question4" value = -1 >-1
+            <input type = "radio" name="question4" value = 0 >0
+            <input type = "radio" name="question4" value = 1 >1
+            <input type = "radio" name="question4" value = 2 >2
+            <input type = "radio" name="question4" value = 3 >3 <br>
+      Bạn thường giữ được sự bình tĩnh kể cả khi chịu đựng áp lực lớn.<br>
+            <input type = "radio" name="question5" value = -3 >-3
+            <input type = "radio" name="question5" value = -2 >-2
+            <input type = "radio" name="question5" value = -1 >-1
+            <input type = "radio" name="question5" value = 0 >0
+            <input type = "radio" name="question5" value = 1 >1
+            <input type = "radio" name="question5" value = 2 >2
+            <input type = "radio" name="question5" value = 3 >3 <br>
+      Ở những sự kiện, bạn hiếm khi giới thiệu mình với người lạ mà hầu như chỉ nói chuyện với những người bạn đã quen biết. <br>
+            <input type = "radio" name="question6" value = -3 >-3
+            <input type = "radio" name="question6" value = -2 >-2
+            <input type = "radio" name="question6" value = -1>-1
+            <input type = "radio" name="question6" value = 0 >0
+            <input type = "radio" name="question6" value = 1>1
+            <input type = "radio" name="question6" value = 2>2
+            <input type = "radio" name="question6" value = 3>3 <br>
+      Bạn luôn ưu tiên hoàn thành việc đang làm trước khi bắt đầu một việc mới. <br>
+            <input type = "radio" name="question7" value = -3 >-3
+            <input type = "radio" name="question7" value = -2 >-2
+            <input type = "radio" name="question7" value = -1>-1
+            <input type = "radio" name="question7" value = 0>0
+            <input type = "radio" name="question7" value = 1>1
+            <input type = "radio" name="question7" value = 2>2
+            <input type = "radio" name="question7" value = 3>3 <br>
+      Bạn là một người rất đa cảm. <br>
+            <input type = "radio" name="question8" value = -3 >-3
+            <input type = "radio" name="question8" value = -2 >-2
+            <input type = "radio" name="question8" value = -1 >-1
+            <input type = "radio" name="question8" value = 0>0
+            <input type = "radio" name="question8" value = 1>1
+            <input type = "radio" name="question8" value = 2>2
+            <input type = "radio" name="question8" value = 3>3 <br>
+      Bạn thích việc sử dụng những công cụ hỗ trợ tổ chức và sắp xếp, ví dụ như lên thời khóa biểu, danh sách. <br>
+            <input type = "radio" name="question9" value = -3>-3
+            <input type = "radio" name="question9" value = -2 >-2
+            <input type = "radio" name="question9" value = -1>-1
+            <input type = "radio" name="question9" value = 0>0
+            <input type = "radio" name="question9" value = 1>1
+            <input type = "radio" name="question9" value = 2>2
+            <input type = "radio" name="question9" value = 3>3 <br>
+      Việc mắc một lỗi nhỏ cũng khiến bạn hoài nghi về năng lực và kiến thức của bản thân. <br>
+            <input type = "radio" name="question10" value = -3 >-3
+            <input type = "radio" name="question10" value = -2 >-2
+            <input type = "radio" name="question10" value = -1>-1
+            <input type = "radio" name="question10" value = 0>0
+            <input type = "radio" name="question10" value = 1>1
+            <input type = "radio" name="question10" value = 2>2
+            <input type = "radio" name="question10" value = 3>3<br>
+      Bạn cảm thấy thoải mái với việc bắt chuyện với những người mà bạn thấy thú vị.<br>
+            <input type = "radio" name="question11" value = -3 >-3
+            <input type = "radio" name="question11" value = -2 >-2
+            <input type = "radio" name="question11" value = -1>-1
+            <input type = "radio" name="question11" value = 0>0
+            <input type = "radio" name="question11" value = 1>1
+            <input type = "radio" name="question11" value = 2>2
+            <input type = "radio" name="question11" value = 3>3<br>
+      Bạn không hứng thú với việc thảo luận về các góc nhìn hoặc phân tích các tác phẩm nghệ thuật.<br>
+            <input type = "radio" name="question12" value = -3>-3
+            <input type = "radio" name="question12" value = -2>-2
+            <input type = "radio" name="question12" value = -1>-1
+            <input type = "radio" name="question12" value = 0>0
+            <input type = "radio" name="question12" value = 1>1
+            <input type = "radio" name="question12" value = 2>2
+            <input type = "radio" name="question12" value = 3>3<br>
+      Bạn có xu hướng đặt lý trí lên trước cảm xúc cá nhân.<br>
+            <input type = "radio" name="question13" value = -3>-3
+            <input type = "radio" name="question13" value = -2>-2
+            <input type = "radio" name="question13" value = -1>-1
+            <input type = "radio" name="question13" value = 0>0
+            <input type = "radio" name="question13" value = 1>1
+            <input type = "radio" name="question13" value = 2>2
+            <input type = "radio" name="question13" value = 3>3<br>
+      Bạn yêu thích làm việc dựa trên cảm hứng hơn là lên kế hoạch hằng ngày.
+            <br>
+            <input type = "radio" name="question14" value = -3>-3
+            <input type = "radio" name="question14" value = -2>-2
+            <input type = "radio" name="question14" value = -1>-1
+            <input type = "radio" name="question14" value = 0>0
+            <input type = "radio" name="question14" value = 1>1
+            <input type = "radio" name="question14" value = 2>2
+            <input type = "radio" name="question14" value = 3>3 <br>
+      Bạn ít khi lo lắng rằng mình có gây ấn tượng tốt với những người bạn gặp.
+            <br>
+            <input type = "radio" name="question15" value = -3>-3
+            <input type = "radio" name="question15" value = -2>-2
+            <input type = "radio" name="question15" value = -1>-1
+            <input type = "radio" name="question15" value = 0>0
+            <input type = "radio" name="question15" value = 1>1
+            <input type = "radio" name="question15" value = 2>2
+            <input type = "radio" name="question15" value = 3>3 <br>
+      Bạn yêu thích việc tham gia các hoạt động nhóm.
+            <br>
+            <input type = "radio" name="question16" value = -3>-3
+            <input type = "radio" name="question16" value = -2>-2
+            <input type = "radio" name="question16" value = -1>-1
+            <input type = "radio" name="question16" value = 0>0
+            <input type = "radio" name="question16" value = 1>1
+            <input type = "radio" name="question16" value = 2>2
+            <input type = "radio" name="question16" value = 3>3 <br>
+      sú<br>
+            <input type = "radio" name="question17" value = -3>-3
+            <input type = "radio" name="question17" value = -2>-2
+            <input type = "radio" name="question17" value = -1>-1
+            <input type = "radio" name="question17" value = 0>0
+            <input type = "radio" name="question17" value = 1>1
+            <input type = "radio" name="question17" value = 2>2
+            <input type = "radio" name="question17" value = 3>3 <br>
+      Việc giúp đỡ người khác đạt được những thành tựu khiến bạn cảm thấy hạnh phúc hơn việc bản thân đạt được những thành tựu.<br>
+            <input type = "radio" name="question18" value = -3>-3
+            <input type = "radio" name="question18" value = -2>-2
+            <input type = "radio" name="question18" value = -1>-1
+            <input type = "radio" name="question18" value = 0>0
+            <input type = "radio" name="question18" value = 1>1
+            <input type = "radio" name="question18" value = 2>2
+            <input type = "radio" name="question18" value = 3>3<br>
+      Bạn có quá nhiều sở thích và chúng làm bạn khó lựa chọn được sẽ làm thử gì tiếp theo.<br>
+            <input type = "radio" name="question19" value = -3>-3
+            <input type = "radio" name="question19" value = -2>-2
+            <input type = "radio" name="question19" value = -1>-1
+            <input type = "radio" name="question19" value = 0>0
+            <input type = "radio" name="question19" value = 1>1
+            <input type = "radio" name="question19" value = 2>2
+            <input type = "radio" name="question19" value = 3>3<br>
+      Bạn dễ bị lo lắng rằng mọi việc có thể trở nên tệ hơn.<br>
+            <input type = "radio" name="question20" value = -3>-3
+            <input type = "radio" name="question20" value = -2>-2
+            <input type = "radio" name="question20" value = -1>-1
+            <input type = "radio" name="question20" value = 0>0
+            <input type = "radio" name="question20" value = 1>1
+            <input type = "radio" name="question20" value = 2>2
+            <input type = "radio" name="question20" value = 3>3 <br>
+      Bạn thường tránh vai trò lãnh đạo trong nhóm.<br>
+            <input type = "radio" name="question21" value = -3>-3
+            <input type = "radio" name="question21" value = -2>-2
+            <input type = "radio" name="question21" value = -1>-1
+            <input type = "radio" name="question21" value = 0>0
+            <input type = "radio" name="question21" value = 1>1
+            <input type = "radio" name="question21" value = 2>2
+            <input type = "radio" name="question21" value = 3>3 <br>   
+      Bạn chắc chắn không phải là một người có tâm hồn nghệ sĩ.<br>
+            <input type = "radio" name="question22" value = -3>-3
+            <input type = "radio" name="question22" value = -2>-2
+            <input type = "radio" name="question22" value = -1>-1
+            <input type = "radio" name="question22" value = 0>0
+            <input type = "radio" name="question22" value = 1>1
+            <input type = "radio" name="question22" value = 2>2
+            <input type = "radio" name="question22" value = 3>3 <br>
+         
+      Bạn quan niệm rằng thế giới sẽ tốt hơn nếu mọi người dựa vào lý trí hơn là cảm xúc.<br>
+            <input type = "radio" name="question23" value = -3>-3
+            <input type = "radio" name="question23" value = -2>-2
+            <input type = "radio" name="question23" value = -1>-1
+            <input type = "radio" name="question23" value = 0>0
+            <input type = "radio" name="question23" value = 1>1
+            <input type = "radio" name="question23" value = 2>2
+            <input type = "radio" name="question23" value = 3>3 <br>
+      Bạn lựa chọn hoàn thành việc nhà trước khi nghỉ ngơi.<br>
+            <input type = "radio" name="question24" value = -3>-3
+            <input type = "radio" name="question24" value = -2>-2
+            <input type = "radio" name="question24" value = -1>-1
+            <input type = "radio" name="question24" value = 0>0
+            <input type = "radio" name="question24" value = 1>1
+            <input type = "radio" name="question24" value = 2>2
+            <input type = "radio" name="question24" value = 3>3 <br>
+      Bạn thích xem người khác tranh luận. <br>
+            <input type = "radio" name="question25" value = -3 >-3
+            <input type = "radio" name="question25" value = -2>-2
+            <input type = "radio" name="question25" value = -1>-1
+            <input type = "radio" name="question25" value = 0>0
+            <input type = "radio" name="question25" value = 1>1
+            <input type = "radio" name="question25" value = 2>2
+            <input type = "radio" name="question25" value = 3>3 <br>
+      Bạn có khuynh hướng tránh thu hút sự chú ý về phía mình.<br>
+            <input type = "radio" name="question26" value = -3>-3
+            <input type = "radio" name="question26" value = -2>-2
+            <input type = "radio" name="question26" value = -1>-1
+            <input type = "radio" name="question26" value = 0>0
+            <input type = "radio" name="question26" value = 1>1
+            <input type = "radio" name="question26" value = 2>2
+            <input type = "radio" name="question26" value = 3>3 <br>
+      Tâm trạng của bạn dễ bị thay đổi.<br>
+            <input type = "radio" name="question27" value = -3>-3
+            <input type = "radio" name="question27" value = -2>-2
+            <input type = "radio" name="question27" value = -1>-1
+            <input type = "radio" name="question27" value = 0>0
+            <input type = "radio" name="question27" value = 1>1
+            <input type = "radio" name="question27" value = 2>2
+            <input type = "radio" name="question27" value = 3>3 <br>
+      Bạn dễ mất kiên nhẫn với những người làm việc không hiệu quả bằng bạn.<br>
+            <input type = "radio" name="question28" value = -3>-3
+            <input type = "radio" name="question28" value = -2 >-2
+            <input type = "radio" name="question28" value = -1>-v1
+            <input type = "radio" name="question28" value = 0 >0
+            <input type = "radio" name="question28" value = 1 >1
+            <input type = "radio" name="question28" value = 2 >2
+            <input type = "radio" name="question28" value = 3 >3 <br>
+      Bạn thường hoàn thành công việc vào lúc cuối cùng nhất có thể. <br>
+            <input type = "radio" name="question29">-3
+            <input type = "radio" name="question29" value = -2 >-2
+            <input type = "radio" name="question29" value = -1 >-1
+            <input type = "radio" name="question29" value = 0 >0
+            <input type = "radio" name="question29" value = 1 >1
+            <input type = "radio" name="question29" value = 2 >2
+            <input type = "radio" name="question29" value = 3 >3 <br>
+      Bạn luôn băn khoăn về những câu hỏi về việc gì sẽ diễn ra sau cái chết.<br>
+            <input type = "radio" name="question30" value = -3 >-3
+            <input type = "radio" name="question30" value = -2 >-2
+            <input type = "radio" name="question30" value = -1 >-1
+            <input type = "radio" name="question30" value = 0 >0
+            <input type = "radio" name="question30" value = 1 >1
+            <input type = "radio" name="question30" value = 2 >2
+            <input type = "radio" name="question30" value = 3 >3 <br>
+      Bạn thường thích việc ở gần người khác hơn là ở một mình.<br>
+            <input type = "radio" name="question31" value = -3 >-3
+            <input type = "radio" name="question31" value = -2 >-2
+            <input type = "radio" name="question31" value = -1 >-1
+            <input type = "radio" name="question31" value = 0 >0
+            <input type = "radio" name="question31" value = 1 >1
+            <input type = "radio" name="question31" value = 2 >2
+            <input type = "radio" name="question31" value = 3 >3 <br>
+      Khi vấn đề tranh luận trở nên quá lý thuyết, bạn cảm thấy buồn chán và mất hết hứng thú.<br>
+            <input type = "radio" name="question32" value = -3 >-3
+            <input type = "radio" name="question32" value = -2 >-2
+            <input type = "radio" name="question32" value = -1 >-1
+            <input type = "radio" name="question32" value = 0 >0
+            <input type = "radio" name="question32" value = 1 >1
+            <input type = "radio" name="question32" value = 2 >2
+            <input type = "radio" name="question32" value = 3 >3 <br>
+      Bạn cảm thấy dễ dàng đồng cảm với những người có trải nghiệm hoàn toàn khác bạn.<br>
+            <input type = "radio" name="question33" value = -3 >-3
+            <input type = "radio" name="question33" value = -2 >-2
+            <input type = "radio" name="question33" value = -1 >-1
+            <input type = "radio" name="question33" value = 0 >0
+            <input type = "radio" name="question33" value = 1 >1
+            <input type = "radio" name="question33" value = 2 >2
+            <input type = "radio" name="question33" value = 3 >3  <br>
+      Bạn thường xuyên trì hoãn việc đưa ra lựa chọn cuối cùng.<br>
+            <input type = "radio" name="question34" value = -3 >-3
+            <input type = "radio" name="question34" value = -2 >-2
+            <input type = "radio" name="question34" value = -1 >-1
+            <input type = "radio" name="question34" value = 0 >0
+            <input type = "radio" name="question34" value = 1 >1
+            <input type = "radio" name="question34" value = 2 >2
+            <input type = "radio" name="question34" value = 3 >3 <br>
+      Bạn hiếm khi nghi ngờ lựa chọn của bản thân.<br>
+            <input type = "radio" name="question35" value = -3 >-3
+            <input type = "radio" name="question35" value = -2 >-2
+            <input type = "radio" name="question35" value = -1 >-1
+            <input type = "radio" name="question35" value = 0 >0
+            <input type = "radio" name="question35" value = 1 >1
+            <input type = "radio" name="question35" value = 2 >2
+            <input type = "radio" name="question35" value = 3 >3<br>
+      Những gì bạn cần sau một tuần dài mệt mỏi là những sự kiện sôi động, náo nhiệt.<br>
+            <input type = "radio" name="question36" value = -3 >-3
+            <input type = "radio" name="question36" value = -2 >-2
+            <input type = "radio" name="question36" value = -1 >-1
+            <input type = "radio" name="question36" value = 0 >0
+            <input type = "radio" name="question36" value = 1 >1
+            <input type = "radio" name="question36" value = 2 >2
+            <input type = "radio" name="question36" value = 3 >3<br>
+      Bạn thích đi bảo tàng nghệ thuật<br>
+            <input type = "radio" name="question37" value = -3 >-3
+            <input type = "radio" name="question37" value = -2 >-2
+            <input type = "radio" name="question37" value = -1 >-1
+            <input type = "radio" name="question37" value = 0 >0
+            <input type = "radio" name="question37" value = 1 >1
+            <input type = "radio" name="question37" value = 2 >2
+            <input type = "radio" name="question37" value = 3 >3<br>
+      Bạn thường gặp khó khăn trong việc thấu hiểu cảm xúc của người khác.<br>
+            <input type = "radio" name="question38" value = -3 >-3
+            <input type = "radio" name="question38" value = -2 >-2
+            <input type = "radio" name="question38" value = -1 >-1
+            <input type = "radio" name="question38" value = 0 >0
+            <input type = "radio" name="question38" value = 1 >1
+            <input type = "radio" name="question38" value = 2 >2
+            <input type = "radio" name="question38" value = 3 >3<br>      
+      Bạn thích lên danh sách công việc cần làm hằng ngày.<br>
+            <input type = "radio" name="question39" value = -3 >-3
+            <input type = "radio" name="question39" value = -2 >-2
+            <input type = "radio" name="question39" value = -1 >-1
+            <input type = "radio" name="question39" value = 0 >0
+            <input type = "radio" name="question39" value = 1 >1
+            <input type = "radio" name="question39" value = 2 >2
+            <input type = "radio" name="question39" value = 3 >3  <br>
+      sú<br>
+            <input type = "radio" name="question40" value = -3 >-3
+            <input type = "radio" name="question40" value = -2 >-2
+            <input type = "radio" name="question40" value = -1 >-1
+            <input type = "radio" name="question40" value = 0 >0
+            <input type = "radio" name="question40" value = 1 >1
+            <input type = "radio" name="question40" value = 2 >2
+            <input type = "radio" name="question40" value = 3 >3<br>
+      Bạn thường tránh việc gọi điện.<br>
+            <input type = "radio" name="question41" value = -3 >-3
+            <input type = "radio" name="question41" value = -2 >-2
+            <input type = "radio" name="question41" value = -1 >-1
+            <input type = "radio" name="question41" value = 0 >0
+            <input type = "radio" name="question41" value = 1 >1
+            <input type = "radio" name="question41" value = 2 >2
+            <input type = "radio" name="question41" value = 3 >3<br>
+      Bạn dành khá nhiều thời gian để thử nghiệm những góc nhìn khác hoàn toàn với góc nhìn của bản thân.<br>
+            <input type = "radio" name="question42" value = -3 >-3
+            <input type = "radio" name="question42" value = -2 >-2
+            <input type = "radio" name="question42" value = -1 >-1
+            <input type = "radio" name="question42" value = 0 >0
+            <input type = "radio" name="question42" value = 1 >1
+            <input type = "radio" name="question42" value = 2 >2
+            <input type = "radio" name="question42" value = 3 >3<br>
+      Bạn thường là người chủ động liên hệ với người khác cũng như khới xưởng những hoạt động.<br>
+            <input type = "radio" name="question43" value = -3 >-3
+            <input type = "radio" name="question43" value = -2 >-2
+            <input type = "radio" name="question43" value = -1 >-1
+            <input type = "radio" name="question43" value = 0 >0
+            <input type = "radio" name="question43" value = 1 >1
+            <input type = "radio" name="question43" value = 2 >2
+            <input type = "radio" name="question43" value = 3 >3<br>
+      Khi kế hoạch không như dự tính, ưu tiên hàng đầu của bạn là đưa mọi việc trở về đúng với kế hoạch ban đầu càng sớm càng tốt.<br>
+            <input type = "radio" name="question44" value = -3 >-3
+            <input type = "radio" name="question44" value = -2 >-2
+            <input type = "radio" name="question44" value = -1 >-1
+            <input type = "radio" name="question44" value = 0 >0
+            <input type = "radio" name="question44" value = 1 >1
+            <input type = "radio" name="question44" value = 2 >2
+            <input type = "radio" name="question44" value = 3 >3<br>
+      Bạn vẫn còn để tâm những lỗi sai trong quá khứ.<br>
+            <input type = "radio" name="question45" value = -3 >-3
+            <input type = "radio" name="question45" value = -2 >-2
+            <input type = "radio" name="question45" value = -1 >-1
+            <input type = "radio" name="question45" value = 0 >0
+            <input type = "radio" name="question45" value = 1 >1
+            <input type = "radio" name="question45" value = 2 >2
+            <input type = "radio" name="question45" value = 3 >3<br>
+      Bạn ít khi nghiền ngẫm về lý do con người tồn tại cũng như ý nghĩa của cuộc sống.<br>
+            <input type = "radio" name="question46" value = -3 >-3
+            <input type = "radio" name="question46" value = -2 >-2
+            <input type = "radio" name="question46" value = -1 >-1
+            <input type = "radio" name="question46" value = 0 >0
+            <input type = "radio" name="question46" value = 1 >1
+            <input type = "radio" name="question46" value = 2 >2
+            <input type = "radio" name="question46" value = 3 >3<br>
+      Bạn bị cảm xúc kiểm soát hơn là bạn kiểm soát chúng.<br>
+            <input type = "radio" name="question47" value = -3 >-3
+            <input type = "radio" name="question47" value = -2 >-2
+            <input type = "radio" name="question47" value = -1 >-1
+            <input type = "radio" name="question47" value = 0 >0
+            <input type = "radio" name="question47" value = 1 >1
+            <input type = "radio" name="question47" value = 2 >2
+            <input type = "radio" name="question47" value = 3 >3 <br>
+      Bạn luôn cố gắng giữ thể diện cho người khác kể cả khi đó là lỗi của họ.<br>
+            <input type = "radio" name="question48" value = -3 >-3
+            <input type = "radio" name="question48" value = -2 >-2
+            <input type = "radio" name="question48" value = -1 >-1
+            <input type = "radio" name="question48" value = 0 >0
+            <input type = "radio" name="question48" value = 1 >1
+            <input type = "radio" name="question48" value = 2 >2
+            <input type="radio" name="question48" value=3>3 <br>
+      Bạn thường làm việc tự phát hơn là lên kế hoạch sắp xếp từ trước. <br>
+            <input type = "radio" name="question49" value = -3 >-3
+            <input type = "radio" name="question49" value = -2 >-2
+            <input type = "radio" name="question49" value = -1 >-1
+            <input type = "radio" name="question49" value = 0 >0
+            <input type = "radio" name="question49" value = 1 >1
+            <input type = "radio" name="question49" value = 2 >2
+            <input type = "radio" name="question49" value = 3 >3 <br>
+      Khi được người khác đánh giá cao, bạn thường suy nghĩ xem khi nào thì bạn sẽ gây thất vọng cho họ.<br>
+            <input type = "radio" name="question50" value = -3 >-3
+            <input type = "radio" name="question50" value = -2 >-2
+            <input type = "radio" name="question50" value = -1 >-1
+            <input type = "radio" name="question50" value = 0 >0
+            <input type = "radio" name="question50" value = 1 >1
+            <input type = "radio" name="question50" value = 2 >2
+            <input type = "radio" name="question50" value = 3 >3 <br>
+      Bạn yêu thích những công việc cho phép bạn làm việc một mình trong hầu hết thời gian.<br>
+               <input type = "radio" name="question51" value = -3 >-3
+               <input type = "radio" name="question51" value = -2 >-2
+               <input type = "radio" name="question51" value = -1 >-1
+               <input type = "radio" name="question51" value = 0 >0
+               <input type = "radio" name="question51" value = 1 >1
+               <input type = "radio" name="question51" value = 2 >2
+               <input type = "radio" name="question51" value = 3 >3 <br>
+      Bạn tin rằng việc suy ngẫm về những câu hỏi triết học là phí thời gian.<br>
+               <input type = "radio" name="question52" value = -3 >-3
+               <input type = "radio" name="question52" value = -2 >-2
+               <input type = "radio" name="question52" value = -1 >-1
+               <input type = "radio" name="question52" value = 0 >0
+               <input type = "radio" name="question52" value = 1 >1
+               <input type = "radio" name="question52" value = 2 >2
+               <input type = "radio" name="question52" value = 3 >3 <br>
+         
+      Bạn yêu thích những nơi bận rộn, bùng nổ hơn là những nơi yên ắng, tính lặng. <br>
+               <input type = "radio" name="question53" value = -3 >-3
+               <input type = "radio" name="question53" value = -2 >-2
+               <input type = "radio" name="question53" value = -1 >-1
+               <input type = "radio" name="question53" value = 0 >0
+               <input type = "radio" name="question53" value = 1 >1
+               <input type = "radio" name="question53" value = 2 >2
+               <input type = "radio" name="question53" value = 3 >3 <br>
+      Bạn có thể hiểu được cảm xúc của người khác ngay từ ánh nhìn đầu tiên. <br> 
+               <input type = "radio" name="question54" value = -3 >-3
+               <input type = "radio" name="question54" value = -2 >-2
+               <input type = "radio" name="question54" value = -1 >-1
+               <input type = "radio" name="question54" value = 0 >0
+               <input type = "radio" name="question54" value = 1 >1
+               <input type = "radio" name="question54" value = 2 >2
+               <input type = "radio" name="question54" value = 3 >3 <br> 
+      Bạn thường cảm thấy bị choáng ngợp.<br> 
+               <input type = "radio" name="question55" value = -3 >-3
+               <input type = "radio" name="question55" value = -2 >-2
+               <input type = "radio" name="question55" value = -1 >-1
+               <input type = "radio" name="question55" value = 0 >0
+               <input type = "radio" name="question55" value = 1 >1
+               <input type = "radio" name="question55" value = 2 >2
+               <input type = "radio" name="question55" value = 3 >3 <br> 
+      Bạn hoàn thành công việc một cách có phương pháp, không bỏ sót bất kỳ giai đoạn nào.<br>
+               <input type = "radio" name="question56" value = -3 >-3
+               <input type = "radio" name="question56" value = -2 >-2
+               <input type = "radio" name="question56" value = -1 >-1
+               <input type = "radio" name="question56" value = 0 >0
+               <input type = "radio" name="question56" value = 1 >1
+               <input type = "radio" name="question56" value = 2 >2
+               <input type = "radio" name="question56" value = 3 >3 <br>
+      Bạn đặc biệt thích thú trước những thứ mang tính tranh luận. <br>
+               <input type = "radio" name="question57" value = -3 >-3
+               <input type = "radio" name="question57" value = -2 >-2
+               <input type = "radio" name="question57" value = -1 >-1
+               <input type = "radio" name="question57" value = 0 >0
+               <input type = "radio" name="question57" value = 1 >1
+               <input type = "radio" name="question57" value = 2 >2
+               <input type = "radio" name="question57" value = 3 >3 <br>
+      Bạn sẵn sàng nhường lại cơ hội của bản thân cho những người thật sự cần nó.<br>
+               <input type = "radio" name="question58" value = -3 >-3
+               <input type = "radio" name="question58" value = -2 >-2
+               <input type = "radio" name="question58" value = -1 >-1
+               <input type = "radio" name="question58" value = 0 >0
+               <input type = "radio" name="question58" value = 1 >1
+               <input type = "radio" name="question58" value = 2 >2
+               <input type = "radio" name="question58" value = 3 >3 <br>
+      Bạn thường gặp khó khăn với deadline.<br>
+               <input type = "radio" name="question59" value = -3 >-3
+               <input type = "radio" name="question59" value = -2 >-2
+               <input type = "radio" name="question59" value = -1 >-1
+               <input type = "radio" name="question59" value = 0 >0
+               <input type = "radio" name="question59" value = 1 >1
+               <input type = "radio" name="question59" value = 2 >2
+               <input type = "radio" name="question59" value = 3 >3 <br>
+      Bạn cảm thấy tự tin rằng mọi chuyện sẽ diễn ra theo ý bạn.<br>
+               <input type = "radio" name="question60" value = -3 >-3
+               <input type = "radio" name="question60" value = -2 >-2
+               <input type = "radio" name="question60" value = -1 >-1
+               <input type = "radio" name="question60" value = 0 >0
+               <input type = "radio" name="question60" value = 1 >1
+               <input type = "radio" name="question60" value = 2 >2
+               <input type = "radio" name="question60" value = 3 >3 <br>     
+</span>
+<span lang="en">
+
+      You regularly make new friends.<br>
+         <input type = "radio" name="question1" value = -3 >-3
+         <input type = "radio" name="question1" value = -2 >-2
+         <input type = "radio" name="question1" value = -1 >-1 
+         <input type = "radio" name="question1" value = 0 >0
+         <input type = "radio" name="question1" value = 1 >1
+         <input type = "radio" name="question1" value = 2 >2 
+         <input type = "radio" name="question1" value = 3>3  <br>
+      You spend a lot of your free time exploring various random topics that pique your interest.<br>
+         <input type = "radio" name="question2" value = -3 >-3
+         <input type = "radio" name="question2" value = -2 >-2
+         <input type = "radio" name="question2" value = -1 >-1 
+         <input type = "radio" name="question2" value = 0 >0
+         <input type = "radio" name="question2" value = 1 >1
+         <input type = "radio" name="question2" value = 2 >2 
+         <input type = "radio" name="question2" value = 3 >3 <br>
+      Seeing other people cry can easily make you feel like you want to cry too <br>
+         <input type = "radio" name="question3" value = -3 >-3
+         <input type = "radio" name="question3" value = -2 >-2
+         <input type = "radio" name="question3" value = -1 >-1 
+         <input type = "radio" name="question3" value = 0 >0
+         <input type = "radio" name="question3" value = 1 >1
+         <input type = "radio" name="question3" value = 2 >2 
+         <input type = "radio" name="question3" value = 3 >3 <br>
+      You often make a backup plan for a backup plan.<br>
+         <input type = "radio" name="question4" value = -3 >-3 
+         <input type = "radio" name="question4" value = -2 >-2 
+         <input type = "radio" name="question4" value = -1 >-1 
+         <input type = "radio" name="question4" value = 0 >0 
+         <input type = "radio" name="question4" value = 1 >1
+         <input type = "radio" name="question4" value = 2 >2 
+         <input type = "radio" name="question4" value = 3 >3 <br> 
+      You usually stay calm, even under a lot of pressure.<br>
+         <input type = "radio" name="question5" value = -3 >-3 
+         <input type = "radio" name="question5" value = -2 >-2 
+         <input type = "radio" name="question5" value = -1 >-1 
+         <input type = "radio" name="question5" value = 0 >0 
+         <input type = "radio" name="question5" value = 1 >1
+         <input type = "radio" name="question5" value = 2 >2 
+         <input type = "radio" name="question5" value = 3 >3 <br>     
+      At social events, you rarely try to introduce yourself to new people and mostly talk to the ones you already know. <br>
+         <input type = "radio" name="question6" value = -3 >-3 
+         <input type = "radio" name="question6" value = -2 >-2 
+         <input type = "radio" name="question6" value = -1>-1 
+         <input type = "radio" name="question6" value = 0 >0 
+         <input type = "radio" name="question6" value = 1>1
+         <input type = "radio" name="question6" value = 2>2 
+         <input type = "radio" name="question6" value = 3>3 <br>
+      You prefer to completely finish one project before starting another.<br>
+         <input type = "radio" name="question7" value = -3 >-3 
+         <input type = "radio" name="question7" value = -2 >-2 
+         <input type = "radio" name="question7" value = -1>-1 
+         <input type = "radio" name="question7" value = 0>0 
+         <input type = "radio" name="question7" value = 1>1
+         <input type = "radio" name="question7" value = 2>2 
+         <input type = "radio" name="question7" value = 3>3 <br>
+      You are very sentimental. <br>
+         <input type = "radio" name="question8" value = -3 >-3 
+         <input type = "radio" name="question8" value = -2 >-2 
+         <input type = "radio" name="question8" value = -1 >-1 
+         <input type = "radio" name="question8" value = 0>0 
+         <input type = "radio" name="question8" value = 1>1
+         <input type = "radio" name="question8" value = 2>2 
+         <input type = "radio" name="question8" value = 3>3  <br>
+      You like to use organizing tools like schedules and lists.<br>
+         <input type = "radio" name="question9" value = -3>-3 
+         <input type = "radio" name="question9" value = -2 >-2 
+         <input type = "radio" name="question9" value = -1>-1 
+         <input type = "radio" name="question9" value = 0>0 
+         <input type = "radio" name="question9" value = 1>1
+         <input type = "radio" name="question9" value = 2>2 
+         <input type = "radio" name="question9" value = 3>3 <br>
+      Even a small mistake can cause you to doubt your overall abilities and knowledge. <br>
+         <input type = "radio" name="question10" value = -3 >-3 
+         <input type = "radio" name="question10" value = -2 >-2 
+         <input type = "radio" name="question10" value = -1>-1 
+         <input type = "radio" name="question10" value = 0>0 
+         <input type = "radio" name="question10" value = 1>1
+         <input type = "radio" name="question10" value = 2>2 
+         <input type = "radio" name="question10" value = 3>3 <br>
+      You feel comfortable just walking up to someone you find interesting and striking up a conversation. <br>
+         <input type = "radio" name="question11" value = -3 >-3 
+         <input type = "radio" name="question11" value = -2 >-2 
+         <input type = "radio" name="question11" value = -1>-1 
+         <input type = "radio" name="question11" value = 0>0 
+         <input type = "radio" name="question11" value = 1>1
+         <input type = "radio" name="question11" value = 2>2 
+         <input type = "radio" name="question11" value = 3>3 <br>
+      You are not too interested in discussing various interpretations and analyses of creative works.<br>
+         <input type = "radio" name="question12" value = -3>-3 
+         <input type = "radio" name="question12" value = -2>-2 
+         <input type = "radio" name="question12" value = -1>-1 
+         <input type = "radio" name="question12" value = 0>0 
+         <input type = "radio" name="question12" value = 1>1
+         <input type = "radio" name="question12" value = 2>2 
+         <input type = "radio" name="question12" value = 3>3 <br>
+      You are more inclined to follow your head than your heart.<br>
+         <input type = "radio" name="question13" value = -3>-3 
+         <input type = "radio" name="question13" value = -2>-2 
+         <input type = "radio" name="question13" value = -1>-1 
+         <input type = "radio" name="question13" value = 0>0 
+         <input type = "radio" name="question13" value = 1>1
+         <input type = "radio" name="question13" value = 2>2 
+         <input type = "radio" name="question13" value = 3>3 <br>      
+      You usually prefer just doing what you feel like at any given moment instead of planning a particular daily routine. <br>
+         <input type = "radio" name="question14" value = -3>-3 
+         <input type = "radio" name="question14" value = -2>-2 
+         <input type = "radio" name="question14" value = -1>-1 
+         <input type = "radio" name="question14" value = 0>0 
+         <input type = "radio" name="question14" value = 1>1
+         <input type = "radio" name="question14" value = 2>2 
+         <input type = "radio" name="question14" value = 3>3 <br>
+      You rarely worry about whether you make a good impression on people you meet. <br>
+         <input type = "radio" name="question15" value = -3>-3 
+         <input type = "radio" name="question15" value = -2>-2 
+         <input type = "radio" name="question15" value = -1>-1 
+         <input type = "radio" name="question15" value = 0>0 
+         <input type = "radio" name="question15" value = 1>1
+         <input type = "radio" name="question15" value = 2>2 
+         <input type = "radio" name="question15" value = 3>3 <br>
+      You enjoy participating in group activities. <br>
+         <input type = "radio" name="question16" value = -3>-3 
+         <input type = "radio" name="question16" value = -2>-2 
+         <input type = "radio" name="question16" value = -1>-1 
+         <input type = "radio" name="question16" value = 0>0 
+         <input type = "radio" name="question16" value = 1>1
+         <input type = "radio" name="question16" value = 2>2 
+         <input type = "radio" name="question16" value = 3>3 <br>  
+      You like books and movies that make you come up with your own interpretation of the ending.<br>
+         <input type = "radio" name="question17" value = -3>-3 
+         <input type = "radio" name="question17" value = -2>-2 
+         <input type = "radio" name="question17" value = -1>-1 
+         <input type = "radio" name="question17" value = 0>0 
+         <input type = "radio" name="question17" value = 1>1
+         <input type = "radio" name="question17" value = 2>2 
+         <input type = "radio" name="question17" value = 3>3  <br>
+      Your happiness comes more from helping others accomplish things than your own accomplishments. <br>
+         <input type = "radio" name="question18" value = -3>-3 
+         <input type = "radio" name="question18" value = -2>-2 
+         <input type = "radio" name="question18" value = -1>-1 
+         <input type = "radio" name="question18" value = 0>0 
+         <input type = "radio" name="question18" value = 1>1
+         <input type = "radio" name="question18" value = 2>2 
+         <input type = "radio" name="question18" value = 3>3 <br>
+      You are interested in so many things that you find it difficult to choose what to try next. <br>
+         <input type = "radio" name="question19" value = -3>-3 
+         <input type = "radio" name="question19" value = -2>-2 
+         <input type = "radio" name="question19" value = -1>-1 
+         <input type = "radio" name="question19" value = 0>0 
+         <input type = "radio" name="question19" value = 1>1
+         <input type = "radio" name="question19" value = 2>2 
+         <input type = "radio" name="question19" value = 3>3 <br>
+      
+      You are prone to worrying that things will take a turn for the worse.<br>
+         <input type = "radio" name="question20" value = -3>-3 
+         <input type = "radio" name="question20" value = -2>-2 
+         <input type = "radio" name="question20" value = -1>-1 
+         <input type = "radio" name="question20" value = 0>0 
+         <input type = "radio" name="question20" value = 1>1
+         <input type = "radio" name="question20" value = 2>2 
+         <input type = "radio" name="question20" value = 3>3 <br>
+      You avoid leadership roles in group settings.<br>
+         <input type = "radio" name="question21" value = -3>-3 
+         <input type = "radio" name="question21" value = -2>-2 
+         <input type = "radio" name="question21" value = -1>-1 
+         <input type = "radio" name="question21" value = 0>0 
+         <input type = "radio" name="question21" value = 1>1
+         <input type = "radio" name="question21" value = 2>2 
+         <input type = "radio" name="question21" value = 3>3 <br>     
+      You are definitely not an artistic type of person. <br>
+         <input type = "radio" name="question22" value = -3>-3 
+         <input type = "radio" name="question22" value = -2>-2 
+         <input type = "radio" name="question22" value = -1>-1 
+         <input type = "radio" name="question22" value = 0>0 
+         <input type = "radio" name="question22" value = 1>1
+         <input type = "radio" name="question22" value = 2>2 
+         <input type = "radio" name="question22" value = 3>3 <br>    
+      You think the world would be a better place if people relied more on rationality and less on their feelings.<br>
+         <input type = "radio" name="question23" value = -3>-3 
+         <input type = "radio" name="question23" value = -2>-2 
+         <input type = "radio" name="question23" value = -1>-1 
+         <input type = "radio" name="question23" value = 0>0 
+         <input type = "radio" name="question23" value = 1>1
+         <input type = "radio" name="question23" value = 2>2 
+         <input type = "radio" name="question23" value = 3>3 <br>
+      You prefer to do your chores before allowing yourself to relax.<br>
+         <input type = "radio" name="question24" value = -3>-3 
+         <input type = "radio" name="question24" value = -2>-2 
+         <input type = "radio" name="question24" value = -1>-1 
+         <input type = "radio" name="question24" value = 0>0 
+         <input type = "radio" name="question24" value = 1>1
+         <input type = "radio" name="question24" value = 2>2 
+         <input type = "radio" name="question24" value = 3>3 <br>
+      You enjoy watching people argue. <br>
+         <input type = "radio" name="question25" value = -3 >-3 
+         <input type = "radio" name="question25" value = -2>-2 
+         <input type = "radio" name="question25" value = -1>-1 
+         <input type = "radio" name="question25" value = 0>0 
+         <input type = "radio" name="question25" value = 1>1
+         <input type = "radio" name="question25" value = 2>2 
+         <input type = "radio" name="question25" value = 3>3 <br>        
+      You tend to avoid drawing attention to yourself.<br>
+         <input type = "radio" name="question26" value = -3>-3 
+         <input type = "radio" name="question26" value = -2>-2 
+         <input type = "radio" name="question26" value = -1>-1 
+         <input type = "radio" name="question26" value = 0>0 
+         <input type = "radio" name="question26" value = 1>1
+         <input type = "radio" name="question26" value = 2>2 
+         <input type = "radio" name="question26" value = 3>3 <br>  
+      Your mood can change very quickly.<br>
+         <input type = "radio" name="question27" value = -3>-3 
+         <input type = "radio" name="question27" value = -2>-2 
+         <input type = "radio" name="question27" value = -1>-1 
+         <input type = "radio" name="question27" value = 0>0 
+         <input type = "radio" name="question27" value = 1>1
+         <input type = "radio" name="question27" value = 2>2 
+         <input type = "radio" name="question27" value = 3>3 <br>
+      You lose patience with people who are not as efficient as you.<br>
+         <input type = "radio" name="question28" value = -3>-3 
+         <input type = "radio" name="question28" value = -2 >-2 
+         <input type = "radio" name="question28" value = -1>-v1 
+         <input type = "radio" name="question28" value = 0 >0 
+         <input type = "radio" name="question28" value = 1 >1
+         <input type = "radio" name="question28" value = 2 >2 
+         <input type = "radio" name="question28" value = 3 >3 <br>
+      You often end up doing things at the last possible moment. <br>
+         <input type = "radio" name="question29">-3 
+         <input type = "radio" name="question29" value = -2 >-2 
+         <input type = "radio" name="question29" value = -1 >-1 
+         <input type = "radio" name="question29" value = 0 >0 
+         <input type = "radio" name="question29" value = 1 >1
+         <input type = "radio" name="question29" value = 2 >2 
+         <input type = "radio" name="question29" value = 3 >3 <br> 
+      You have always been fascinated by the question of what, if anything, happens after death. <br>
+         <input type = "radio" name="question30" value = -3 >-3
+         <input type = "radio" name="question30" value = -2 >-2
+         <input type = "radio" name="question30" value = -1 >-1 
+         <input type = "radio" name="question30" value = 0 >0
+         <input type = "radio" name="question30" value = 1 >1
+         <input type = "radio" name="question30" value = 2 >2 
+         <input type = "radio" name="question30" value = 3 >3 <br>
+      You usually prefer to be around others rather than on your own. <br>
+         <input type = "radio" name="question31" value = -3 >-3
+         <input type = "radio" name="question31" value = -2 >-2
+         <input type = "radio" name="question31" value = -1 >-1 
+         <input type = "radio" name="question31" value = 0 >0
+         <input type = "radio" name="question31" value = 1 >1
+         <input type = "radio" name="question31" value = 2 >2 
+         <input type = "radio" name="question31" value = 3 >3 <br>
+      You become bored or lose interest when the discussion gets highly theoretical.<br>
+         <input type = "radio" name="question32" value = -3 >-3
+         <input type = "radio" name="question32" value = -2 >-2
+         <input type = "radio" name="question32" value = -1 >-1 
+         <input type = "radio" name="question32" value = 0 >0
+         <input type = "radio" name="question32" value = 1 >1
+         <input type = "radio" name="question32" value = 2 >2 
+         <input type = "radio" name="question32" value = 3 >3 <br>
+      You find it easy to empathize with a person whose experiences are very different from yours.<br>
+         <input type = "radio" name="question33" value = -3 >-3
+         <input type = "radio" name="question33" value = -2 >-2
+         <input type = "radio" name="question33" value = -1 >-1 
+         <input type = "radio" name="question33" value = 0 >0
+         <input type = "radio" name="question33" value = 1 >1
+         <input type = "radio" name="question33" value = 2 >2 
+         <input type = "radio" name="question33" value = 3 >3 <br>
+      You usually postpone finalizing decisions for as long as possible.<br>
+         <input type = "radio" name="question34" value = -3 >-3
+         <input type = "radio" name="question34" value = -2 >-2
+         <input type = "radio" name="question34" value = -1 >-1 
+         <input type = "radio" name="question34" value = 0 >0
+         <input type = "radio" name="question34" value = 1 >1
+         <input type = "radio" name="question34" value = 2 >2 
+         <input type = "radio" name="question34" value = 3 >3 <br>
+      You rarely second-guess the choices that you have made.<br>
+         <input type = "radio" name="question35" value = -3 >-3
+         <input type = "radio" name="question35" value = -2 >-2
+         <input type = "radio" name="question35" value = -1 >-1 
+         <input type = "radio" name="question35" value = 0 >0
+         <input type = "radio" name="question35" value = 1 >1
+         <input type = "radio" name="question35" value = 2 >2 
+         <input type = "radio" name="question35" value = 3 >3 <br>       
+      After a long and exhausting week, a lively social event is just what you need.<br>
+         <input type = "radio" name="question36" value = -3 >-3
+         <input type = "radio" name="question36" value = -2 >-2
+         <input type = "radio" name="question36" value = -1 >-1 
+         <input type = "radio" name="question36" value = 0 >0
+         <input type = "radio" name="question36" value = 1 >1
+         <input type = "radio" name="question36" value = 2 >2 
+         <input type = "radio" name="question36" value = 3 >3 <br>
+      You enjoy going to art museums.<br>
+         <input type = "radio" name="question37" value = -3 >-3
+         <input type = "radio" name="question37" value = -2 >-2
+         <input type = "radio" name="question37" value = -1 >-1 
+         <input type = "radio" name="question37" value = 0 >0
+         <input type = "radio" name="question37" value = 1 >1
+         <input type = "radio" name="question37" value = 2 >2 
+         <input type = "radio" name="question37" value = 3 >3 <br>
+      You often have a hard time understanding other people’s feelings.<br>
+         <input type = "radio" name="question38" value = -3 >-3
+         <input type = "radio" name="question38" value = -2 >-2
+         <input type = "radio" name="question38" value = -1 >-1 
+         <input type = "radio" name="question38" value = 0 >0
+         <input type = "radio" name="question38" value = 1 >1
+         <input type = "radio" name="question38" value = 2 >2 
+         <input type = "radio" name="question38" value = 3 >3 <br>       
+      You like to have a to-do list for each day.<br>
+         <input type = "radio" name="question39" value = -3 >-3
+         <input type = "radio" name="question39" value = -2 >-2
+         <input type = "radio" name="question39" value = -1 >-1 
+         <input type = "radio" name="question39" value = 0 >0
+         <input type = "radio" name="question39" value = 1 >1
+         <input type = "radio" name="question39" value = 2 >2 
+         <input type = "radio" name="question39" value = 3 >3 <br>
+      You rarely feel insecure.<br>
+         <input type = "radio" name="question40" value = -3 >-3
+         <input type = "radio" name="question40" value = -2 >-2
+         <input type = "radio" name="question40" value = -1 >-1 
+         <input type = "radio" name="question40" value = 0 >0
+         <input type = "radio" name="question40" value = 1 >1
+         <input type = "radio" name="question40" value = 2 >2 
+         <input type = "radio" name="question40" value = 3 >3 <br>
+      You avoid making phone calls. <br>
+         <input type = "radio" name="question41" value = -3 >-3
+         <input type = "radio" name="question41" value = -2 >-2
+         <input type = "radio" name="question41" value = -1 >-1 
+         <input type = "radio" name="question41" value = 0 >0
+         <input type = "radio" name="question41" value = 1 >1
+         <input type = "radio" name="question41" value = 2 >2 
+         <input type = "radio" name="question41" value = 3 >3 <br>
+      You often spend a lot of time trying to understand views that are very different from your own. <br>
+         <input type = "radio" name="question42" value = -3 >-3
+         <input type = "radio" name="question42" value = -2 >-2
+         <input type = "radio" name="question42" value = -1 >-1 
+         <input type = "radio" name="question42" value = 0 >0
+         <input type = "radio" name="question42" value = 1 >1
+         <input type = "radio" name="question42" value = 2 >2 
+         <input type = "radio" name="question42" value = 3 >3 <br>
+      In your social circle, you are often the one who contacts your friends and initiates activities.<br>
+         <input type = "radio" name="question43" value = -3 >-3
+         <input type = "radio" name="question43" value = -2 >-2
+         <input type = "radio" name="question43" value = -1 >-1 
+         <input type = "radio" name="question43" value = 0 >0
+         <input type = "radio" name="question43" value = 1 >1
+         <input type = "radio" name="question43" value = 2 >2 
+         <input type = "radio" name="question43" value = 3 >3  <br>
+      If your plans are interrupted, your top priority is to get back on track as soon as possible. <br>
+         <input type = "radio" name="question44" value = -3 >-3
+         <input type = "radio" name="question44" value = -2 >-2
+         <input type = "radio" name="question44" value = -1 >-1 
+         <input type = "radio" name="question44" value = 0 >0
+         <input type = "radio" name="question44" value = 1 >1
+         <input type = "radio" name="question44" value = 2 >2 
+         <input type = "radio" name="question44" value = 3 >3 <br>
+      You are still bothered by mistakes that you made a long time ago. <br>
+         <input type = "radio" name="question45" value = -3 >-3
+         <input type = "radio" name="question45" value = -2 >-2
+         <input type = "radio" name="question45" value = -1 >-1 
+         <input type = "radio" name="question45" value = 0 >0
+         <input type = "radio" name="question45" value = 1 >1
+         <input type = "radio" name="question45" value = 2 >2 
+         <input type = "radio" name="question45" value = 3 >3 <br>
+      You rarely contemplate the reasons for human existence or the meaning of life. <br>
+         <input type = "radio" name="question46" value = -3 >-3
+         <input type = "radio" name="question46" value = -2 >-2
+         <input type = "radio" name="question46" value = -1 >-1 
+         <input type = "radio" name="question46" value = 0 >0
+         <input type = "radio" name="question46" value = 1 >1
+         <input type = "radio" name="question46" value = 2 >2 
+         <input type = "radio" name="question46" value = 3 >3 <br>
+      Your emotions control you more than you control them.<br>
+         <input type = "radio" name="question47" value = -3 >-3
+         <input type = "radio" name="question47" value = -2 >-2
+         <input type = "radio" name="question47" value = -1 >-1 
+         <input type = "radio" name="question47" value = 0 >0
+         <input type = "radio" name="question47" value = 1 >1
+         <input type = "radio" name="question47" value = 2 >2 
+         <input type = "radio" name="question47" value = 3 >3 <br>
+      You take great care not to make people look bad, even when it is completely their fault.<br>
+         <input type = "radio" name="question48" value = -3 >-3
+         <input type = "radio" name="question48" value = -2 >-2
+         <input type = "radio" name="question48" value = -1 >-1 
+         <input type = "radio" name="question48" value = 0 >0
+         <input type = "radio" name="question48" value = 1 >1
+         <input type = "radio" name="question48" value = 2 >2 
+         <input type="radio" name="question48" value=3>3 <br>
+      Your personal work style is closer to spontaneous bursts of energy than organized and consistent efforts.<br>
+         <input type = "radio" name="question49" value = -3 >-3
+         <input type = "radio" name="question49" value = -2 >-2
+         <input type = "radio" name="question49" value = -1 >-1 
+         <input type = "radio" name="question49" value = 0 >0
+         <input type = "radio" name="question49" value = 1 >1
+         <input type = "radio" name="question49" value = 2 >2 
+         <input type = "radio" name="question49" value = 3 >3 <br>
+      When someone thinks highly of you, you wonder how long it will take them to feel disappointed in you.<br>
+         <input type = "radio" name="question50" value = -3 >-3
+         <input type = "radio" name="question50" value = -2 >-2
+         <input type = "radio" name="question50" value = -1 >-1 
+         <input type = "radio" name="question50" value = 0 >0
+         <input type = "radio" name="question50" value = 1 >1
+         <input type = "radio" name="question50" value = 2 >2 
+         <input type = "radio" name="question50" value = 3 >3 <br>
+      You would love a job that requires you to work alone most of the time.<br>
+         <input type = "radio" name="question51" value = -3 >-3
+         <input type = "radio" name="question51" value = -2 >-2
+         <input type = "radio" name="question51" value = -1 >-1 
+         <input type = "radio" name="question51" value = 0 >0
+         <input type = "radio" name="question51" value = 1 >1
+         <input type = "radio" name="question51" value = 2 >2 
+         <input type = "radio" name="question51" value = 3 >3 <br>
+      You believe that pondering abstract philosophical questions is a waste of time.<br>
+         <input type = "radio" name="question52" value = -3 >-3
+         <input type = "radio" name="question52" value = -2 >-2
+         <input type = "radio" name="question52" value = -1 >-1 
+         <input type = "radio" name="question52" value = 0 >0
+         <input type = "radio" name="question52" value = 1 >1
+         <input type = "radio" name="question52" value = 2 >2 
+         <input type = "radio" name="question52" value = 3 >3 <br>
+      You feel more drawn to places with busy, bustling atmospheres than quiet, intimate places.<br>
+         <input type = "radio" name="question53" value = -3 >-3
+         <input type = "radio" name="question53" value = -2 >-2
+         <input type = "radio" name="question53" value = -1 >-1 
+         <input type = "radio" name="question53" value = 0 >0
+         <input type = "radio" name="question53" value = 1 >1
+         <input type = "radio" name="question53" value = 2 >2 
+         <input type = "radio" name="question53" value = 3 >3 <br>
+      You know at first glance how someone is feeling.<br>
+         <input type = "radio" name="question54" value = -3 >-3
+         <input type = "radio" name="question54" value = -2 >-2
+         <input type = "radio" name="question54" value = -1 >-1 
+         <input type = "radio" name="question54" value = 0 >0
+         <input type = "radio" name="question54" value = 1 >1
+         <input type = "radio" name="question54" value = 2 >2 
+         <input type = "radio" name="question54" value = 3 >3 <br>  
+      You often feel overwhelmed.<br>
+         <input type = "radio" name="question55" value = -3 >-3
+         <input type = "radio" name="question55" value = -2 >-2
+         <input type = "radio" name="question55" value = -1 >-1 
+         <input type = "radio" name="question55" value = 0 >0
+         <input type = "radio" name="question55" value = 1 >1
+         <input type = "radio" name="question55" value = 2 >2 
+         <input type = "radio" name="question55" value = 3 >3 <br>
+      You complete things methodically without skipping over any steps.<br>
+         <input type = "radio" name="question56" value = -3 >-3
+         <input type = "radio" name="question56" value = -2 >-2
+         <input type = "radio" name="question56" value = -1 >-1 
+         <input type = "radio" name="question56" value = 0 >0
+         <input type = "radio" name="question56" value = 1 >1
+         <input type = "radio" name="question56" value = 2 >2 
+         <input type = "radio" name="question56" value = 3 >3 <br>
+      You are very intrigued by things labeled as controversial.<br>
+         <input type = "radio" name="question57" value = -3 >-3
+         <input type = "radio" name="question57" value = -2 >-2
+         <input type = "radio" name="question57" value = -1 >-1 
+         <input type = "radio" name="question57" value = 0 >0
+         <input type = "radio" name="question57" value = 1 >1
+         <input type = "radio" name="question57" value = 2 >2 
+         <input type = "radio" name="question57" value = 3 >3 <br>
+      You would pass along a good opportunity if you thought someone else needed it more.<br>
+         <input type = "radio" name="question58" value = -3 >-3
+         <input type = "radio" name="question58" value = -2 >-2
+         <input type = "radio" name="question58" value = -1 >-1 
+         <input type = "radio" name="question58" value = 0 >0
+         <input type = "radio" name="question58" value = 1 >1
+         <input type = "radio" name="question58" value = 2 >2 
+         <input type = "radio" name="question58" value = 3 >3 <br>
+   You struggle with deadlines.<br>
+         <input type = "radio" name="question59" value = -3 >-3
+         <input type = "radio" name="question59" value = -2 >-2
+         <input type = "radio" name="question59" value = -1 >-1 
+         <input type = "radio" name="question59" value = 0 >0
+         <input type = "radio" name="question59" value = 1 >1
+         <input type = "radio" name="question59" value = 2 >2 
+         <input type = "radio" name="question59" value = 3 >3 <br>
+   You feel confident that things will work out for you.<br>
+         <input type = "radio" name="question60" value = -3 >-3
+         <input type = "radio" name="question60" value = -2 >-2
+         <input type = "radio" name="question60" value = -1 >-1 
+         <input type = "radio" name="question60" value = 0 >0
+         <input type = "radio" name="question60" value = 1 >1
+         <input type = "radio" name="question60" value = 2 >2 
+         <input type = "radio" name="question60" value = 3 >3 <br>
+</span>
+<button type="submit" class="btn-submit" onclick=window.location.href="{{url_for('predict')}}">Submit</button> 
+</p>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+ $('[lang]').hide(); // hide all lang attributes on start.
+ $('[lang="vie"]').show(); // show just Korean text (you can change it)
+ $('#lang-switch').change(function () { // put onchange event when user select option from select
+var lang = $(this).val(); // decide which language to display using switch case. The rest is obvious (i think)
+switch (lang) {
+   case 'en':
+         $('[lang]').hide();
+         $('[lang="en"]').show();
+   break;
+case 'vie':
+      $('[lang]').hide();
+      $('[lang="vie"]').show();
+break;
+default:
+      $('[lang]').hide();
+      $('[lang="vie"]').show();
+}
+});
+</script>
