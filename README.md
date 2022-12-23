@@ -6,7 +6,7 @@ This project is an attempt to creating a system which help student find ther mat
 ## Technology
 * Flask - version 2.2.2
 * Tensorflow - version 2.10.1
-* Numpy - version 1.21.6
+* Numpy - version 1.23.5
 * Pandas - version 1.3.5
 * Matplotlib - version 3.2.2
 * Keras - version 2.10.0
