@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+<html>
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,26 +27,27 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
    document.getElementById("navbar").style.top = "0";
-} else {
+} 
+else {
 document.getElementById("navbar").style.top = "-50px";
 }
 }</script> 
 
-<form>
-<form action="/predict" method= "post"></form>
+
+<form action="/predict" method= "post">
    <label for="lang-switch">
-      <span lang="vie">Ngôn ngữ</span>
+      <span langlaa="vie">Ngôn ngữ</span>
       <span lang="en">Language</span>
    </label>
    <select id="lang-switch">
       <option value="en">English</option>
       <option value="vie" selected>Tiếng Việt</option>
    </select>
-</form>
+
 <p>
-<span lang="vie"> 
+<form>
+<form lang="vie"> 
       Bạn thường làm quen được nhiều bạn mới.<br>
-            <input type = "radio" name="question1" value = -3 > -3
             <input type = "radio" name="question1" value = -2 > -2
             <input type = "radio" name="question1" value = -1 > -1
             <input type = "radio" name="question1" value = 0 > 0
@@ -175,7 +177,7 @@ document.getElementById("navbar").style.top = "-50px";
             <input type = "radio" name="question16" value = 1>1
             <input type = "radio" name="question16" value = 2>2
             <input type = "radio" name="question16" value = 3>3 <br>
-      sú<br>
+      Bạn thích những bộ phim hoặc quyển sách nào có thể khiến bạn tò mò tưởng tượng ra một đoạn kết khác theo ý của mình <br>
             <input type = "radio" name="question17" value = -3>-3
             <input type = "radio" name="question17" value = -2>-2
             <input type = "radio" name="question17" value = -1>-1
@@ -327,7 +329,7 @@ document.getElementById("navbar").style.top = "-50px";
             <input type = "radio" name="question35" value = 0 >0
             <input type = "radio" name="question35" value = 1 >1
             <input type = "radio" name="question35" value = 2 >2
-            <input type = "radio" name="question35" value = 3 >3<br>
+            <input type = "radio" name="question35" value = 3 >3 <br>
       Những gì bạn cần sau một tuần dài mệt mỏi là những sự kiện sôi động, náo nhiệt.<br>
             <input type = "radio" name="question36" value = -3 >-3
             <input type = "radio" name="question36" value = -2 >-2
@@ -335,15 +337,15 @@ document.getElementById("navbar").style.top = "-50px";
             <input type = "radio" name="question36" value = 0 >0
             <input type = "radio" name="question36" value = 1 >1
             <input type = "radio" name="question36" value = 2 >2
-            <input type = "radio" name="question36" value = 3 >3<br>
-      Bạn thích đi bảo tàng nghệ thuật<br>
+            <input type = "radio" name="question36" value = 3 >3 <br>
+      Bạn thích đi bảo tàng nghệ thuật <br>
             <input type = "radio" name="question37" value = -3 >-3
             <input type = "radio" name="question37" value = -2 >-2
             <input type = "radio" name="question37" value = -1 >-1
             <input type = "radio" name="question37" value = 0 >0
             <input type = "radio" name="question37" value = 1 >1
             <input type = "radio" name="question37" value = 2 >2
-            <input type = "radio" name="question37" value = 3 >3<br>
+            <input type = "radio" name="question37" value = 3 >3 <br>
       Bạn thường gặp khó khăn trong việc thấu hiểu cảm xúc của người khác.<br>
             <input type = "radio" name="question38" value = -3 >-3
             <input type = "radio" name="question38" value = -2 >-2
@@ -359,8 +361,8 @@ document.getElementById("navbar").style.top = "-50px";
             <input type = "radio" name="question39" value = 0 >0
             <input type = "radio" name="question39" value = 1 >1
             <input type = "radio" name="question39" value = 2 >2
-            <input type = "radio" name="question39" value = 3 >3  <br>
-      sú<br>
+            <input type = "radio" name="question39" value = 3 >3 <br>
+      Bạn ít khi cảm thấy thiếu an toàn. <br>
             <input type = "radio" name="question40" value = -3 >-3
             <input type = "radio" name="question40" value = -2 >-2
             <input type = "radio" name="question40" value = -1 >-1
@@ -528,7 +530,8 @@ document.getElementById("navbar").style.top = "-50px";
                <input type = "radio" name="question60" value = 0 >0
                <input type = "radio" name="question60" value = 1 >1
                <input type = "radio" name="question60" value = 2 >2
-               <input type = "radio" name="question60" value = 3 >3 <br>     
+               <input type = "radio" name="question60" value = 3 >3 <br>   
+
 </span>
 <span lang="en">
 
@@ -1016,7 +1019,7 @@ document.getElementById("navbar").style.top = "-50px";
 </span>
 <button type="submit" class="btn-submit" onclick=window.location.href="{{url_for('predict')}}">Submit</button> 
 </p>
-
+</form>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
  $('[lang]').hide(); // hide all lang attributes on start.
@@ -1038,3 +1041,4 @@ default:
 }
 });
 </script>
+</html>
