@@ -6,17 +6,17 @@ from test import predictor
 
 import yaml  # pip install pyyaml, store MYSQL account at other file
 
-Labels = ['ENFJ', 'ENFP', 'ENTJ', 'ENTP', 'ESFJ', 'ESFP', 'ESTJ', 'ESTP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ',
-          'ISFP', 'ISTJ', 'ISTP']  # 16 personality groups
+Labels = ['ENFJ', 'ENFP', 'ENTJ', 'ENTP', 'ESFJ', 'ESFP', 'ESTJ', 'ESTP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ','ISFP', 'ISTJ', 'ISTP']  # 16 personality groups
 from flask_pymongo import PyMongo, MongoClient  # pip install Flask pymongo
 
-# todos = db.todos
+
 app = Flask(__name__)
-model = keras.models.load_model(
-    r'C:\Users\A.Phuc\Desktop\Project\Vocational-Guidance-System\models\final.h5')  # copy relative path
+model = keras.models.load_model(r'WEB-FOR-REAL-main/Vocational-Guidance-System/models/final.h5')  # copy relative path
 
 # take the uri from yaml file
-app.config['MONGO_URI'] = 'mongodb://54.250.144.103:27017/'
+with open(r'WEB-FOR-REAL-main/Vocational-Guidance-System/db.yaml') as file: #copy relative path
+    dbpass=yaml.load(file, Loader=yaml.FullLoader)
+    app.config['MONGO_URI'] = dbpass['uri']
 client = MongoClient(app.config['MONGO_URI'])
 # define the database name test2_database
 db = client.test2_database
