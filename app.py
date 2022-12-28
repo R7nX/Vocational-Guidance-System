@@ -10,7 +10,7 @@ from flask_pymongo import PyMongo #pip install Flask pymongo
 
 # todos = db.todos
 app = Flask(__name__)
-model = keras.models.load_model(r'/Users/thien/Desktop/NCKH/Tensorflow/WEB-FOR-REAL-main/Vocational-Guidance-System/models/final.h5') # copy relative path
+model = keras.models.load_model(r'Vocational-Guidance-System/models/final.h5') # copy relative path
 
 # take the uri from yaml file
 with open(r'WEB-FOR-REAL-main/Vocational-Guidance-System/db.yaml') as file: # copy relative path
