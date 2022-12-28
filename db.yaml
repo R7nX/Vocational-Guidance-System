@@ -2,3 +2,5 @@ mysql_host: '123.20.96.122'
 mysql_user: 'root' 
 mysql_password: 'Lmao!123'
 mysql_db: 'flask' #create Database first
+
+

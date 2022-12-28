@@ -73,3 +73,4 @@ def predict(): #listing temporary career groups(wait for career's list of teache
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=7500, debug=True)  # if it does not work, change the port
+
