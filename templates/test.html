@@ -18,35 +18,33 @@
 <div class="topnav">
 <a href="{{ url_for('index') }}">Home</a>
 <a href="{{ url_for('contact') }}">Contact</a>
-   <a href="{{ url_for('intro') }}"> Intro</a>
+<a href="{{ url_for('intro') }}"> Intro</a>
 </div>
 
 <script>
-   window.onscroll = function () {
-      scrollFunction()
-   };
+window.onscroll = function () {
+scrollFunction()
+};
 
-   function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-         document.getElementById("navbar").style.top = "0";
-      } else {
-         document.getElementById("navbar").style.top = "-50px";
-      }
-   }</script>
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("navbar").style.top = "0";
+} else {
+      document.getElementById("navbar").style.top = "-50px";
+}
+}</script>
 
 
-<form action="/predict" method="post">
-   <label for="lang-switch">
-      <span lang="vie"> Chọn ngôn ngữ</span>
-      <span lang="en">Choose language</span>
-   </label>
-   <select id="lang-switch">
-      <option value="en">English</option>
-      <option value="vie" selected>Tiếng Việt</option>
-   </select>
+<form  method="post">
+<label for="lang-switch">
+<span lang="vie"> Chọn ngôn ngữ</span>
+<span lang="en">Choose language</span>
+</label>
+<select id="lang-switch">
+<option value="en">English</option>
+<option value="vie" selected>Tiếng Việt</option>
+</select>
 
-   <p>
-   <form>
 <span lang="vie">
 <br>
       <label id="q1-label" for="question1">Bạn thường làm quen được nhiều bạn mới.</label> <br><br>
@@ -940,8 +938,7 @@
             <input type="radio" name="question50" value="1">Slightly Agree
             <input type="radio" name="question50" value="2">Partially Agree
             <input type="radio" name="question50" value="3">Fully Agree <br><br>
-      <label id="q51eng-label"
-               for="question51">You would love a job that requires you to work alone most of the time.</label><br><br>
+      <label id="q51eng-label" for="question51">You would love a job that requires you to work alone most of the time.</label><br><br>
             <input type="radio" name="question51" value="-3">Fully Disagree
             <input type="radio" name="question51" value="-2">Partially Disagree
             <input type="radio" name="question51" value="-1">Slightly Disagree
@@ -1014,37 +1011,36 @@
             <input type="radio" name="question59" value="2">Partially Agree
             <input type="radio" name="question59" value="3">Fully Agree <br><br>
       <label id="q60eng-label" for="question60">You feel confident that things will work out for you.</label><br><br>
-         <input type="radio" name="question60" value="-3">Fully Disagree
-         <input type="radio" name="question60" value="-2">Partially Disagree
-         <input type="radio" name="question60" value="-1">Slightly Disagree
-         <input type="radio" name="question60" value="0">Neutral
-         <input type="radio" name="question60" value="1">Slightly Agree
-         <input type="radio" name="question60" value="2">Partially Agree
-         <input type="radio" name="question60" value="3">Fully Agree <br><br>
-</span>
+            <input type="radio" name="question60" value="-3">Fully Disagree
+            <input type="radio" name="question60" value="-2">Partially Disagree
+            <input type="radio" name="question60" value="-1">Slightly Disagree
+            <input type="radio" name="question60" value="0">Neutral
+            <input type="radio" name="question60" value="1">Slightly Agree
+            <input type="radio" name="question60" value="2">Partially Agree
+            <input type="radio" name="question60" value="3">Fully Agree <br><br>
+      </span>
 
-      <button type="submit" class="btn-submit" onclick=window.location.href="{{ url_for('predict') }}">Submit</button>
-   </form>
-   <script src="https://code.jquery.com/jquery-2.2.4.min.js"
-         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-   <script>
-      $('[lang]').hide(); // hide all lang attributes on start.
+<button type="submit" class="btn-submit" onclick=window.location.href="{{ url_for('predict') }}">Submit</button>
+</form>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+$('[lang]').hide(); // hide all lang attributes on start.
       $('[lang="vie"]').show(); // show just Korean text (you can change it)
       $('#lang-switch').change(function () { // put onchange event when user select option from select
          var lang = $(this).val(); // decide which language to display using switch case. The rest is obvious (i think)
-         switch (lang) {
-               case 'en':
-                  $('[lang]').hide();
-                  $('[lang="en"]').show();
-                  break;
-               case 'vie':
-                  $('[lang]').hide();
-                  $('[lang="vie"]').show();
-               break;
-            default:
-               $('[lang]').hide();
-               $('[lang="vie"]').show();
-      }
-      });
-   </script>
+switch (lang) {
+case 'en':
+$('[lang]').hide();
+$('[lang="en"]').show();
+break;
+case 'vie':
+$('[lang]').hide();
+$('[lang="vie"]').show();
+break;
+default:
+$('[lang]').hide();
+$('[lang="vie"]').show();
+}
+});
+</script>
 </html>
