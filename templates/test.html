@@ -21,21 +21,8 @@
 <a href="{{ url_for('intro') }}"> Intro</a>
 </div>
 
-<script>
-window.onscroll = function () {
-scrollFunction()
-};
 
-function scrollFunction() {
-if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("navbar").style.top = "0";
-} else {
-      document.getElementById("navbar").style.top = "-50px";
-}
-}</script>
-
-
-<form  method="post">
+<form action="/predict" method="post">
 <label for="lang-switch">
 <span lang="vie"> Chọn ngôn ngữ</span>
 <span lang="en">Choose language</span>
