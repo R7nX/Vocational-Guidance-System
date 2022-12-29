@@ -6,7 +6,7 @@ from test import predictor
 
 import yaml  # pip install pyyaml, store MYSQL account at other file
 
-Labels = ['ENFJ', 'ENFP', 'ENTJ', 'ENTP', 'ESFJ', 'ESFP', 'ESTJ', 'ESTP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ','ISFP', 'ISTJ', 'ISTP']  # 16 personality groups
+Personality_label = ['ENFJ', 'ENFP', 'ENTJ', 'ENTP', 'ESFJ', 'ESFP', 'ESTJ', 'ESTP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ','ISFP', 'ISTJ', 'ISTP'] 
 from flask_pymongo import PyMongo, MongoClient  # pip install Flask pymongo
 
 
@@ -19,7 +19,7 @@ with open(r'WEB-FOR-REAL-main/Vocational-Guidance-System/db.yaml') as file: #cop
     app.config['MONGO_URI'] = dbpass['uri']
 client = MongoClient(app.config['MONGO_URI'])
 # define the database name test2_database
-db = client.test2_database
+db = client.test_database
 # setup mongodb
 mongo = PyMongo(app)
 
@@ -46,23 +46,24 @@ def take_test():
 
 @app.route('/predict', methods=['POST', 'GET'])
 def predict():  # listing temporary career groups(wait for career's list of teacher)
-    data = {}
-    if request.method == 'POST':
-        for i in range(1, 61):
-            data[f'Question{i}'] = request.form[f'question{i}']
-        db.Response_value.insert_one(data)
     int_features = [int(x) for x in request.form.values()]
     features = np.array(int_features)
     features = features.reshape(1, -1)
     prediction = model.predict(features)  # probability of 16 groups
-    result = Labels[np.argmax(prediction)]  # personality type
+    Personality_types_predict = Personality_label[np.argmax(prediction)] 
+    Career_predict = predictor(Personality_types_predict)
+    data = {}
+    if request.method == 'POST':
+        for i in range(1, 61):
+            data[f'Question {i}'] = request.form[f'question{i}']
+        data['Predicted personality types']=Personality_types_predict
+        data['Predicted career']=Career_predict
+        db.Response_value.insert_one(data)
     # des lại background web, để câu hỏi ra giữa
     # 1 câu/ 1 trang, add hiệu ứng
     # thêm icon vào contact
-    # đổi cỡ chữ intro
-
-    jobs = predictor(result)
-    return render_template('result.html', prediction_text='Nhóm tính cách của bạn là {}'.format(result), jobs=jobs)
+    # đổi cỡ chữ intro 
+    return render_template('result.html', prediction_text='Nhóm tính cách của bạn là {}'.format(Personality_types_predict), jobs=Career_predict)
 
 
 if __name__ == "__main__":
