@@ -52,13 +52,15 @@ def predict():  # listing temporary career groups(wait for career's list of teac
     prediction = model.predict(features)  # probability of 16 groups
     Personality_types_predict = Personality_label[np.argmax(prediction)] 
     Career_predict = predictor(Personality_types_predict)
-    data = {}
-    if request.method == 'POST':
-        for i in range(1, 61):
-            data[f'Question {i}'] = request.form[f'question{i}']
-        data['Predicted personality types']=Personality_types_predict
-        data['Predicted career']=Career_predict
-        db.Response_value.insert_one(data)
+    def insert_data_into_mongo():
+        data = {}
+        if request.method == 'POST':
+            for i in range(1, 61):
+                data[f'Question {i}'] = request.form[f'question{i}']
+            data['Predicted personality types']=Personality_types_predict
+            data['Predicted career']=Career_predict
+            db.Response_value.insert_one(data)
+    insert_data_into_mongo()
     # des lại background web, để câu hỏi ra giữa
     # 1 câu/ 1 trang, add hiệu ứng
     # thêm icon vào contact
