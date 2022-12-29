@@ -10,6 +10,7 @@ This project is an attempt to creating a system which help student find ther mat
 * Pandas - version 1.3.5
 * Matplotlib - version 3.2.2
 * Keras - version 2.10.0
+* MongoDB - version 4.3.2
 
 
 ## Setup
