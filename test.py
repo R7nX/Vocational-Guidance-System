@@ -1,6 +1,6 @@
 def predictor(prediction):    
     if prediction=='ENFJ':
-        jobs = {
+        jobs = [
     "Quảng cáo",
     "Mỹ thuật",
    "Đào tạo thể chất",
@@ -34,9 +34,9 @@ def predictor(prediction):
     "Sân khấu, rạp hát",
     "Quy hoạch và Phát triển Đô thị"
 
-    }
+    ]
     elif prediction=='ENFP':
-        jobs = {
+        jobs = [
     "Khoa học tính toán bảo hiểm",
     "Quảng cáo",
     "Nhân loại học",
@@ -77,9 +77,9 @@ def predictor(prediction):
     "Công tác xã hội",
     "Xã hội học",
     "Bệnh lý học ngôn ngữ nói",
-    "Sân khấu, rạp hát",}
+    "Sân khấu, rạp hát",]
     elif prediction=='ENFP':
-        jobs = {
+        jobs = [
     "Khoa học tính toán bảo hiểm",
     "Quảng cáo",
     "Nhân loại học",
@@ -121,10 +121,10 @@ def predictor(prediction):
     "Xã hội học",
     "Bệnh lý học ngôn ngữ nói",
     "Sân khấu, rạp hát",
-        }
+        ]
 
     elif prediction=='ENTJ':
-        jobs = {
+        jobs = [
     "Kế toán",
     "Quảng cáo",
     "Nhân loại học",
@@ -155,10 +155,10 @@ def predictor(prediction):
     "Nghiên cứu tôn giáo",
     "Xã hội học",
     "Sân khấu, rạp hát",
-        }
+        ]
 
     elif prediction=='ENTP':
-        jobs = {
+        jobs = [
     "Kế toán",
     "Ngành kiến trúc",
     "Sinh học",
@@ -189,10 +189,10 @@ def predictor(prediction):
     "Quản lý tài sản dân cư",
     "Quản lý rủi ro và bảo hiểm",
 
-        }
+        ]
 
     elif prediction=='ESFJ':
-        jobs = {
+        jobs = [
     "Kế toán",
     "Đào tạo thể chất",
     "Quản trị kinh doanh",
@@ -228,10 +228,10 @@ def predictor(prediction):
     "Bệnh lý ngôn ngữ nói",
     "Sân khấu, rạp hát",
 
-        }
+        ]
 
     elif prediction=='ESFP':
-        jobs = {
+        jobs = [
     "Mỹ thuật",
     "Đào tạo thể chất",
     "Chuyên gia về Đời sống Trẻ em",
@@ -269,9 +269,9 @@ def predictor(prediction):
     "Sân khấu, rạp hát",
 
 
-        }
+        ]
     elif prediction=='ESTJ':
-        jobs = {
+        jobs = [
     "Kế toán",
     "Khoa học tính toán bảo hiểm",
     "Đào tạo thể chất",
@@ -297,9 +297,9 @@ def predictor(prediction):
     "Công tác xã hội",
 
 
-        }
+        ]
     elif prediction=='ESTP':
-        jobs = {
+        jobs = [
     "Mỹ thuật",
     "Đào tạo thể chất",
     "Sinh học",
@@ -329,9 +329,9 @@ def predictor(prediction):
     "Viễn thông",
     "Sân khấu, rạp hát",
 
-        }
+        ]
     elif prediction=='INFJ':
-        jobs = {
+        jobs = [
     "Quảng cáo",
     "Ngành kiến trúc",
     "Mỹ thuật",
@@ -375,9 +375,9 @@ def predictor(prediction):
     "Sân khấu, rạp hát",
     "Quy hoạch và Phát triển Đô thị",
 
-        }
+        ]
     elif prediction=='INFP':
-        jobs = {
+        jobs = [
     "Thiết kế trang phục",
     "Ngành kiến trúc",
     "Mỹ thuật",
@@ -410,9 +410,9 @@ def predictor(prediction):
     "Bệnh lý ngôn ngữ nói",
     "Sân khấu, rạp hát",
 
-        }
+        ]
     elif prediction=='INTJ':
-        jobs = {
+        jobs = [
     "Ngành kiến trúc",
     "Mỹ thuật",
     "Hóa sinh",
@@ -455,9 +455,9 @@ def predictor(prediction):
     "Xã hội học",
     "Quy hoạch và Phát triển Đô thị",
 
-        }
+        ]
     elif prediction=='INTP':
-        jobs = {
+        jobs = [
     "Nhân loại học",
     "Ngành kiến trúc",
     "Mỹ thuật",
@@ -498,9 +498,9 @@ def predictor(prediction):
     "Xã hội học",
     "Sân khấu, rạp hát",
 
-        }
+        ]
     elif prediction=='ISFP':
-        jobs = {
+        jobs = [
     "Thiết kế trang phục",
     "Mỹ thuật",
     "Đào tạo thể chất",
@@ -533,9 +533,9 @@ def predictor(prediction):
     "Công tác xã hội",
     "Bệnh lý ngôn ngữ nói",
 
-        }
+        ]
     elif prediction=='ISTJ':
-        jobs = {
+        jobs = [
     "Kế toán",
     "Ngành kiến trúc",
     "Sinh học",
@@ -565,9 +565,9 @@ def predictor(prediction):
     "Quản lý tài sản dân cư",
     "Quản lý rủi ro và bảo hiểm",
 
-        }
+        ]
     elif prediction=='ISTP':
-        jobs = {
+        jobs = [
 "Mỹ thuật",
 "Đào tạo thể chất",
 "Sinh học",
@@ -598,5 +598,5 @@ def predictor(prediction):
 "Sơ cấp y tế",
 "Quản lý rủi ro và bảo hiểm",
 "Sân khấu, rạp hát",
-        }
+        ]
     return jobs
