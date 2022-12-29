@@ -18,7 +18,7 @@ with open(r'WEB-FOR-REAL-main/Vocational-Guidance-System/db.yaml') as file: #cop
     dbpass=yaml.load(file, Loader=yaml.FullLoader)
     app.config['MONGO_URI'] = dbpass['uri']
 client = MongoClient(app.config['MONGO_URI'])
-# define the database name test2_database
+# define the database name test_database
 db = client.test_database
 # setup mongodb
 mongo = PyMongo(app)
