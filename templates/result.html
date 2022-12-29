@@ -8,41 +8,40 @@
     <title>Document</title>
 </head>
 <body>
-<h1 background="/static/cover.jpg">
+<h1 background="/static/cover.jpg"> </h1>
 
-<div class="header">
-    <h1>Vocational Guidance</h1>
-</div>
+    <div class="header">
+        <h1>Vocational Guidance</h1>
+    </div>
 
-<div class="topnav">
-    <a href="{{ url_for('index') }}">Home</a>
-    <a href="{{ url_for('contact') }}">Contact</a>
-    <a href="{{ url_for('intro') }}"> Intro</a>
+    <div class="topnav">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+        <a href="{{ url_for('intro') }}"> Intro</a>
 
 
-</div>
+    </div>
 
-<script>
-    window.onscroll = function () {
-        scrollFunction()
-    };
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-50px";
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-50px";
+            }
         }
-    }
-</script>
+    </script>
 
-<h1 {{ features }} </h1>
-<h2> {{ prediction_text }} </h2>
-<h3> Bạn nên làm những việc sau đây: </h3>
-{% for job in jobs %}
-    <p class = 'tab'>{{ job }}</p>
-{% endfor %}
-
+    <h1> {{ features }} </h1>
+    <h2> {{ prediction_text }} </h2>
+    <h3> Bạn nên làm những việc sau đây: </h3>
+    {% for job in jobs %}
+        <p class='tab'>{{ job }}</p>
+    {% endfor %}
 
 </body>
 </html>
