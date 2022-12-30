@@ -36,20 +36,14 @@
     </select>
     <span lang="en">
       <br><br>
-      <p class="intro"><centre>Welcome to Vocational Guidance, where you can find your best-fit job!</centre> </p>
-      <a href="{{url_for('take_test')}}">
-        <button class="test" >Take the test </button>
-      </a>
+      <p class="intro"><centre>Welcome to Vocational Guidance, where you can find your best-fit job! Please log in before taking the test. </centre> </p>
+      
     </span>
   <span lang="vie">
     <br><br>
-    <p class="intro"><centre></centre> Chào mừng bạn đến với Vocational Guidance! Đây là một phần mềm giúp bạn định hướng nghề nghiệp của mình.   </p>
-    <a href="{{url_for('take_test')}}">
-      <button class="test" > Bắt đầu bú cu </button>
-    </a>
+    <p class="intro"><centre></centre> Chào mừng bạn đến với Vocational Guidance! Đây là một phần mềm giúp bạn định hướng nghề nghiệp của mình! Vui lòng đăng nhập trước khi bú cu   </p>
   </span>
 
-  <span lang="en">
   <div class="noti">
     {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %} 
@@ -63,7 +57,7 @@
                         </div>
                     {% else %}
                         <div class="alert alert_success alter-dismissable fade show" role = "alert"> 
-                        {{ 'You have logged in as ' + message }} 
+                        {{ message }} 
                         <button type = "button" class = "close" data-dismiss="alert">
                         <span aria-hidden="false">&times;</span> 
                         </button>
@@ -73,33 +67,6 @@
             {% endif %}
     {% endwith %} 
   </div>
-</span>
-
-<span lang="vie">
-  <div class="noti">
-    {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %} 
-                {% for category, message in messages %} 
-                    {% if category == 'Error' %}
-                        <div class="alert alert_danger alter-dismissable fade show" role = "alert"> 
-                        {{ message }}
-                        <button type = "button" class = "close" data-dismiss="alert">
-                        <span aria-hidden="true">&times;</span> 
-                        </button>
-                        </div>
-                    {% else %}
-                        <div class="alert alert_success alter-dismissable fade show" role = "alert"> 
-                        {{ 'Bạn đã bú cu thành công dưới tên ' + message }} 
-                        <button type = "button" class = "close" data-dismiss="alert">
-                        <span aria-hidden="false">&times;</span> 
-                        </button>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
-    {% endwith %} 
-  </div>
-</span>
 
 
 </body>

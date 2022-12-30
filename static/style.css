@@ -2,6 +2,7 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
 .bruh{
   background-image: url(cover.jpg);
   background-size: contain;
@@ -16,6 +17,20 @@ html, body {
     font-size: 25px;
     text-align: center;
   }
+.close{
+  position: absolute;
+  top:50%;
+  right: 20;
+  border-color: #f44336;
+  color: red;
+  width: 30px;
+  transform: translateY(-50%);
+}
+.noti{
+  text-align: center;
+  font-size:25px;
+}
+
   .a{
     font-family: 'Times New Roman', Times, serif;
     font-size:35px;

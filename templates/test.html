@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/style.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="static/style.css">
 
-    <title>Take test</title>
+<title>Take test</title>
 </head>
 
 <body class="bruh">
 
 <div class="header">
-    <h1>Vocational Guidance</h1>
+<h1>Vocational Guidance</h1>
 </div>
 
 <div class="topnav">
-    <a href="{{ url_for('index') }}">Home</a>
-    <a href="{{ url_for('contact') }}">Contact</a>
-    <a href="{{ url_for('intro') }}"> Intro</a>
+<a href="{{ url_for('index') }}">Home</a>
+<a href="{{ url_for('contact') }}">Contact</a>
+<a href="{{ url_for('intro') }}"> Intro</a>
 </div>
 
 
 <form action="/predict" method="post">
-    <label for="lang-switch">
-        <span lang="vie"> Chọn ngôn ngữ</span>
-        <span lang="en">Choose language</span>
-    </label>
-    <select id="lang-switch">
-        <option value="en">English</option>
-        <option value="vie" selected>Tiếng Việt</option>
-    </select>
+<label for="lang-switch">
+<span lang="vie"> Chọn ngôn ngữ</span>
+<span lang="en">Choose language</span>
+</label>
+<select id="lang-switch">
+<option value="en">English</option>
+<option value="vie" selected>Tiếng Việt</option>
+</select>
 
-    <span lang="vie">
+<span lang="vie">
 <br><br>
+<right></right>
       <label id="q1-label" for="question1">Bạn thường làm quen được nhiều bạn mới.</label> <br><br>
                <input type="radio" name="question1" value="-3"> Hoàn toàn không đồng tình
                <input type="radio" name="question1" value="-2"> Tương đối không đồng tình
@@ -66,8 +67,7 @@
                <input type="radio" name="question4" value="1"> Đồng tình một phần
                <input type="radio" name="question4" value="2"> Tương đối đồng tình
                <input type="radio" name="question4" value="3">Hoàn toàn đồng tình<br><br>
-      <label id="q5-label"
-             for="question5">Bạn thường giữ được sự bình tĩnh kể cả khi chịu đựng áp lực lớn.</label><br><br>
+      <label id="q5-label" for="question5">Bạn thường giữ được sự bình tĩnh kể cả khi chịu đựng áp lực lớn.</label><br><br>
                <input type="radio" name="question5" value="-3"> Hoàn toàn không đồng tình
                <input type="radio" name="question5" value="-2"> Tương đối không đồng tình
                <input type="radio" name="question5" value="-1"> Không đồng tình một phần
@@ -83,8 +83,7 @@
                <input type="radio" name="question6" value="1"> Đồng tình một phần
                <input type="radio" name="question6" value="2"> Tương đối đồng tình
                <input type="radio" name="question6" value="3">Hoàn toàn đồng tình<br><br>
-      <label id="q7-label"
-             for="question7">Bạn luôn ưu tiên hoàn thành việc đang làm trước khi bắt đầu một việc mới.</label> <br><br>
+      <label id="q7-label" for="question7">Bạn luôn ưu tiên hoàn thành việc đang làm trước khi bắt đầu một việc mới.</label> <br><br>
                <input type="radio" name="question7" value="-3"> Hoàn toàn không đồng tình
                <input type="radio" name="question7" value="-2"> Tương đối không đồng tình
                <input type="radio" name="question7" value="-1"> Không đồng tình một phần
@@ -140,8 +139,7 @@
                <input type="radio" name="question13" value="1"> Đồng tình một phần
                <input type="radio" name="question13" value="2"> Tương đối đồng tình
                <input type="radio" name="question13" value="3">Hoàn toàn đồng tình<br><br>
-      <label id="q14-label"
-             for="question14">Bạn yêu thích làm việc dựa trên cảm hứng hơn là lên kế hoạch hằng ngày.</label><br><br>
+      <label id="q14-label" for="question14">Bạn yêu thích làm việc dựa trên cảm hứng hơn là lên kế hoạch hằng ngày.</label><br><br>
                <input type="radio" name="question14" value="-3"> Hoàn toàn không đồng tình
                <input type="radio" name="question14" value="-2"> Tương đối không đồng tình
                <input type="radio" name="question14" value="-1"> Không đồng tình một phần
@@ -149,8 +147,7 @@
                <input type="radio" name="question14" value="1"> Đồng tình một phần
                <input type="radio" name="question14" value="2"> Tương đối đồng tình
                <input type="radio" name="question14" value="3">Hoàn toàn đồng tình<br><br>
-      <label id="q15-label"
-             for="question15">Bạn ít khi lo lắng rằng mình có gây ấn tượng tốt với những người bạn gặp.</label><br><br>
+      <label id="q15-label" for="question15">Bạn ít khi lo lắng rằng mình có gây ấn tượng tốt với những người bạn gặp.</label><br><br>
                <input type="radio" name="question15" value="-3"> Hoàn toàn không đồng tình
                <input type="radio" name="question15" value="-2"> Tương đối không đồng tình
                <input type="radio" name="question15" value="-1"> Không đồng tình một phần
@@ -254,8 +251,7 @@
                <input type="radio" name="question27" value="1"> Đồng tình một phần
                <input type="radio" name="question27" value="2"> Tương đối đồng tình
                <input type="radio" name="question27" value="3">Hoàn toàn đồng tình<br><br>
-      <label id="q28-label"
-             for="question28">Bạn dễ mất kiên nhẫn với những người làm việc không hiệu quả bằng bạn.</label><br><br>
+      <label id="q28-label" for="question28">Bạn dễ mất kiên nhẫn với những người làm việc không hiệu quả bằng bạn.</label><br><br>
                <input type="radio" name="question28" value="-3"> Hoàn toàn không đồng tình
                <input type="radio" name="question28" value="-2"> Tương đối không đồng tình
                <input type="radio" name="question28" value="-1"> Không đồng tình một phần
@@ -271,8 +267,7 @@
                <input type="radio" name="question29" value="1"> Đồng tình một phần
                <input type="radio" name="question29" value="2"> Tương đối đồng tình
                <input type="radio" name="question29" value="3">Hoàn toàn đồng tình<br><br>
-      <label id="q30-label"
-             for="question30">Bạn luôn băn khoăn về những câu hỏi về việc gì sẽ diễn ra sau cái chết.</label><br><br>
+      <label id="q30-label" for="question30">Bạn luôn băn khoăn về những câu hỏi về việc gì sẽ diễn ra sau cái chết.</label><br><br>
                <input type="radio" name="question30" value="-3"> Hoàn toàn không đồng tình
                <input type="radio" name="question30" value="-2"> Tương đối không đồng tình
                <input type="radio" name="question30" value="-1"> Không đồng tình một phần
@@ -336,8 +331,7 @@
                <input type="radio" name="question37" value="1"> Đồng tình một phần
                <input type="radio" name="question37" value="2"> Tương đối đồng tình
                <input type="radio" name="question37" value="3">Hoàn toàn đồng tình<br><br>
-      <label id="q38-label"
-             for="question38">Bạn thường gặp khó khăn trong việc thấu hiểu cảm xúc của người khác.</label><br><br>
+      <label id="q38-label" for="question38">Bạn thường gặp khó khăn trong việc thấu hiểu cảm xúc của người khác.</label><br><br>
                <input type="radio" name="question38" value="-3"> Hoàn toàn không đồng tình
                <input type="radio" name="question38" value="-2"> Tương đối không đồng tình
                <input type="radio" name="question38" value="-1"> Không đồng tình một phần
@@ -418,7 +412,7 @@
                <input type="radio" name="question47" value="2"> Tương đối đồng tình
                <input type="radio" name="question47" value="3">Hoàn toàn đồng tình<br><br>
       <label id="q48-label"
-             for="question48">Bạn luôn cố gắng giữ thể diện cho người khác kể cả khi đó là lỗi của họ.</label><br><br>
+            for="question48">Bạn luôn cố gắng giữ thể diện cho người khác kể cả khi đó là lỗi của họ.</label><br><br>
                <input type="radio" name="question48" value="-3"> Hoàn toàn không đồng tình
                <input type="radio" name="question48" value="-2"> Tương đối không đồng tình
                <input type="radio" name="question48" value="-1"> Không đồng tình một phần
@@ -427,7 +421,7 @@
                <input type="radio" name="question48" value="2"> Tương đối đồng tình
                <input type="radio" name="question48" value="3">Hoàn toàn đồng tình<br><br>
       <label id="q49-label"
-             for="question49">Bạn thường làm việc tự phát hơn là lên kế hoạch sắp xếp từ trước. </label><br><br>
+            for="question49">Bạn thường làm việc tự phát hơn là lên kế hoạch sắp xếp từ trước. </label><br><br>
                <input type="radio" name="question49" value="-3"> Hoàn toàn không đồng tình
                <input type="radio" name="question49" value="-2"> Tương đối không đồng tình
                <input type="radio" name="question49" value="-1"> Không đồng tình một phần
@@ -452,7 +446,7 @@
                   <input type="radio" name="question51" value="2"> Tương đối đồng tình
                   <input type="radio" name="question51" value="3">Hoàn toàn đồng tình<br><br>
       <label id="q52-label"
-             for="question52">Bạn tin rằng việc suy ngẫm về những câu hỏi triết học là phí thời gian.</label><br><br>
+            for="question52">Bạn tin rằng việc suy ngẫm về những câu hỏi triết học là phí thời gian.</label><br><br>
                   <input type="radio" name="question52" value="-3"> Hoàn toàn không đồng tình
                   <input type="radio" name="question52" value="-2"> Tương đối không đồng tình
                   <input type="radio" name="question52" value="-1"> Không đồng tình một phần
@@ -470,7 +464,7 @@
                   <input type="radio" name="question53" value="2"> Tương đối đồng tình
                   <input type="radio" name="question53" value="3">Hoàn toàn đồng tình<br><br>
       <label id="q54-label"
-             for="question54">Bạn có thể hiểu được cảm xúc của người khác ngay từ ánh nhìn đầu tiên. </label><br><br>
+            for="question54">Bạn có thể hiểu được cảm xúc của người khác ngay từ ánh nhìn đầu tiên. </label><br><br>
                   <input type="radio" name="question54" value="-3"> Hoàn toàn không đồng tình
                   <input type="radio" name="question54" value="-2"> Tương đối không đồng tình
                   <input type="radio" name="question54" value="-1"> Không đồng tình một phần
@@ -495,7 +489,7 @@
                   <input type="radio" name="question56" value="2"> Tương đối đồng tình
                   <input type="radio" name="question56" value="3">Hoàn toàn đồng tình<br><br>
       <label id="q57-label"
-             for="question57">Bạn đặc biệt thích thú trước những thứ mang tính tranh luận. </label><br><br>
+            for="question57">Bạn đặc biệt thích thú trước những thứ mang tính tranh luận. </label><br><br>
                   <input type="radio" name="question57" value="-3"> Hoàn toàn không đồng tình
                   <input type="radio" name="question57" value="-2"> Tương đối không đồng tình
                   <input type="radio" name="question57" value="-1"> Không đồng tình một phần
@@ -504,7 +498,7 @@
                   <input type="radio" name="question57" value="2"> Tương đối đồng tình
                   <input type="radio" name="question57" value="3">Hoàn toàn đồng tình<br><br>
       <label id="q58-label"
-             for="question58">Bạn sẵn sàng nhường lại cơ hội của bản thân cho những người thật sự cần nó.</label><br><br>
+            for="question58">Bạn sẵn sàng nhường lại cơ hội của bản thân cho những người thật sự cần nó.</label><br><br>
                <input type="radio" name="question58" value="-3"> Hoàn toàn không đồng tình
                <input type="radio" name="question58" value="-2"> Tương đối không đồng tình
                <input type="radio" name="question58" value="-1"> Không đồng tình một phần
@@ -530,7 +524,7 @@
                   <input type="radio" name="question60" value="3">Hoàn toàn đồng tình<br><br>
 
 </span>
-    <span lang="en">
+<span lang="en">
 <br><br>
       <label id="q1eng-label" for="question1">You regularly make new friends.</label><br><br>
             <input type="radio" name="question1" value="-3">Fully Disagree
@@ -548,8 +542,7 @@
             <input type="radio" name="question2" value="1">Slightly Agree
             <input type="radio" name="question2" value="2">Partially Agree
             <input type="radio" name="question2" value="3">Fully Agree <br><br>
-      <label id="q3eng-label"
-             for="question3">Seeing other people cry can easily make you feel like you want to cry too. </label><br><br>
+      <label id="q3eng-label" for="question3">Seeing other people cry can easily make you feel like you want to cry too. </label><br><br>
             <input type="radio" name="question3" value="-3">Fully Disagree
             <input type="radio" name="question3" value="-2">Partially Disagree
             <input type="radio" name="question3" value="-1">Slightly Disagree
@@ -581,8 +574,7 @@
             <input type="radio" name="question6" value="1">Slightly Agree
             <input type="radio" name="question6" value="2">Partially Agree
             <input type="radio" name="question6" value="3">Fully Agree <br><br>
-      <label id="q7eng-label"
-             for="question7">You prefer to completely finish one project before starting another.</label><br><br>
+      <label id="q7eng-label" for="question7">You prefer to completely finish one project before starting another.</label><br><br>
             <input type="radio" name="question7" value="-3">Fully Disagree
             <input type="radio" name="question7" value="-2">Partially Disagree
             <input type="radio" name="question7" value="-1">Slightly Disagree
@@ -630,8 +622,7 @@
             <input type="radio" name="question12" value="1">Slightly Agree
             <input type="radio" name="question12" value="2">Partially Agree
             <input type="radio" name="question12" value="3">Fully Agree <br><br>
-      <label id="q13eng-label"
-             for="question13">You are more inclined to follow your head than your heart.</label><br><br>
+      <label id="q13eng-label" for="question13">You are more inclined to follow your head than your heart.</label><br><br>
             <input type="radio" name="question13" value="-3">Fully Disagree
             <input type="radio" name="question13" value="-2">Partially Disagree
             <input type="radio" name="question13" value="-1">Slightly Disagree
@@ -687,8 +678,7 @@
             <input type="radio" name="question19" value="1">Slightly Agree
             <input type="radio" name="question19" value="2">Partially Agree
             <input type="radio" name="question19" value="3">Fully Agree <br><br>
-      <label id="q20eng-label"
-             for="question20">You are prone to worrying that things will take a turn for the worse.</label><br><br>
+      <label id="q20eng-label" for="question20">You are prone to worrying that things will take a turn for the worse.</label><br><br>
             <input type="radio" name="question20" value="-3">Fully Disagree
             <input type="radio" name="question20" value="-2">Partially Disagree
             <input type="radio" name="question20" value="-1">Slightly Disagree
@@ -720,8 +710,7 @@
             <input type="radio" name="question23" value="1">Slightly Agree
             <input type="radio" name="question23" value="2">Partially Agree
             <input type="radio" name="question23" value="3">Fully Agree <br><br>
-      <label id="q24eng-label"
-             for="question24">You prefer to do your chores before allowing yourself to relax.</label><br><br>
+      <label id="q24eng-label" for="question24">You prefer to do your chores before allowing yourself to relax.</label><br><br>
             <input type="radio" name="question24" value="-3">Fully Disagree
             <input type="radio" name="question24" value="-2">Partially Disagree
             <input type="radio" name="question24" value="-1">Slightly Disagree
@@ -753,8 +742,7 @@
             <input type="radio" name="question27" value="1">Slightly Agree
             <input type="radio" name="question27" value="2">Partially Agree
             <input type="radio" name="question27" value="3">Fully Agree <br><br>
-      <label id="q28eng-label"
-             for="question28">You lose patience with people who are not as efficient as you.</label><br><br>
+      <label id="q28eng-label" for="question28">You lose patience with people who are not as efficient as you.</label><br><br>
             <input type="radio" name="question28" value="-3">Fully Disagree
             <input type="radio" name="question28" value="-2">Partially Disagree
             <input type="radio" name="question28" value="-1">Slightly Disagree
@@ -762,8 +750,7 @@
             <input type="radio" name="question28" value="1">Slightly Agree
             <input type="radio" name="question28" value="2">Partially Agree
             <input type="radio" name="question28" value="3">Fully Agree <br><br>
-      <label id="q29eng-label"
-             for="question29">You often end up doing things at the last possible moment.</label><br><br>
+      <label id="q29eng-label" for="question29">You often end up doing things at the last possible moment.</label><br><br>
             <input type="radio" name="question29">Fully Disagree
             <input type="radio" name="question29" value="-2">Partially Disagree
             <input type="radio" name="question29" value="-1">Slightly Disagree
@@ -779,8 +766,7 @@
             <input type="radio" name="question30" value="1">Slightly Agree
             <input type="radio" name="question30" value="2">Partially Agree
             <input type="radio" name="question30" value="3">Fully Agree <br><br>
-      <label id="q31eng-label"
-             for="question31">You usually prefer to be around others rather than on your own.</label><br><br>
+      <label id="q31eng-label" for="question31">You usually prefer to be around others rather than on your own.</label><br><br>
             <input type="radio" name="question31" value="-3">Fully Disagree
             <input type="radio" name="question31" value="-2">Partially Disagree
             <input type="radio" name="question31" value="-1">Slightly Disagree
@@ -804,8 +790,7 @@
             <input type="radio" name="question33" value="1">Slightly Agree
             <input type="radio" name="question33" value="2">Partially Agree
             <input type="radio" name="question33" value="3">Fully Agree <br><br>
-      <label id="q34eng-label"
-             for="question34">You usually postpone finalizing decisions for as long as possible.</label><br><br>
+      <label id="q34eng-label" for="question34">You usually postpone finalizing decisions for as long as possible.</label><br><br>
             <input type="radio" name="question34" value="-3">Fully Disagree
             <input type="radio" name="question34" value="-2">Partially Disagree
             <input type="radio" name="question34" value="-1">Slightly Disagree
@@ -837,8 +822,7 @@
             <input type="radio" name="question37" value="1">Slightly Agree
             <input type="radio" name="question37" value="2">Partially Agree
             <input type="radio" name="question37" value="3">Fully Agree <br><br>
-      <label id="q38eng-label"
-             for="question38">You often have a hard time understanding other people’s feelings.</label><br><br>
+      <label id="q38eng-label" for="question38">You often have a hard time understanding other people’s feelings.</label><br><br>
             <input type="radio" name="question38" value="-3">Fully Disagree
             <input type="radio" name="question38" value="-2">Partially Disagree
             <input type="radio" name="question38" value="-1">Slightly Disagree
@@ -894,8 +878,7 @@
             <input type="radio" name="question44" value="1">Slightly Agree
             <input type="radio" name="question44" value="2">Partially Agree
             <input type="radio" name="question44" value="3">Fully Agree <br><br>
-      <label id="q45eng-label"
-             for="question45">You are still bothered by mistakes that you made a long time ago.</label><br><br>
+      <label id="q45eng-label" for="question45">You are still bothered by mistakes that you made a long time ago.</label><br><br>
             <input type="radio" name="question45" value="-3">Fully Disagree
             <input type="radio" name="question45" value="-2">Partially Disagree
             <input type="radio" name="question45" value="-1">Slightly Disagree
@@ -943,8 +926,7 @@
             <input type="radio" name="question50" value="1">Slightly Agree
             <input type="radio" name="question50" value="2">Partially Agree
             <input type="radio" name="question50" value="3">Fully Agree <br><br>
-      <label id="q51eng-label"
-             for="question51">You would love a job that requires you to work alone most of the time.</label><br><br>
+      <label id="q51eng-label" for="question51">You would love a job that requires you to work alone most of the time.</label><br><br>
             <input type="radio" name="question51" value="-3">Fully Disagree
             <input type="radio" name="question51" value="-2">Partially Disagree
             <input type="radio" name="question51" value="-1">Slightly Disagree
@@ -984,8 +966,7 @@
             <input type="radio" name="question55" value="1">Slightly Agree
             <input type="radio" name="question55" value="2">Partially Agree
             <input type="radio" name="question55" value="3">Fully Agree <br><br>
-      <label id="q56eng-label"
-             for="question56">You complete things methodically without skipping over any steps.</label><br><br>
+      <label id="q56eng-label" for="question56">You complete things methodically without skipping over any steps.</label><br><br>
             <input type="radio" name="question56" value="-3">Fully Disagree
             <input type="radio" name="question56" value="-2">Partially Disagree
             <input type="radio" name="question56" value="-1">Slightly Disagree
@@ -993,8 +974,7 @@
             <input type="radio" name="question56" value="1">Slightly Agree
             <input type="radio" name="question56" value="2">Partially Agree
             <input type="radio" name="question56" value="3">Fully Agree <br><br>
-      <label id="q57eng-label"
-             for="question57">You are very intrigued by things labeled as controversial.</label><br><br>
+      <label id="q57eng-label" for="question57">You are very intrigued by things labeled as controversial.</label><br><br>
             <input type="radio" name="question57" value="-3">Fully Disagree
             <input type="radio" name="question57" value="-2">Partially Disagree
             <input type="radio" name="question57" value="-1">Slightly Disagree
@@ -1028,27 +1008,28 @@
             <input type="radio" name="question60" value="3">Fully Agree <br><br>
       </span>
 
-    <button type="submit" class="btn-submit" onclick=window.location.href="{{ url_for('predict') }}">Submit</button>
+<button type="submit" class="btn-submit" onclick="{{ url_for('predict') }}">Submit</button>
 </form>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
-    $('[lang]').hide(); // hide all lang attributes on start.
-    $('[lang="vie"]').show(); // show just Korean text (you can change it)
-    $('#lang-switch').change(function () { // put onchange event when user select option from select
-        var lang = $(this).val(); // decide which language to display using switch case. The rest is obvious (i think)
-        switch (lang) {
-            case 'en':
-                $('[lang]').hide();
-                $('[lang="en"]').show();
-                break;
-            case 'vie':
-                $('[lang]').hide();
-                $('[lang="vie"]').show();
-                break;
-            default:
-                $('[lang]').hide();
-                $('[lang="vie"]').show();
-        }
-    });
+$('[lang]').hide(); // hide all lang attributes on start.
+      $('[lang="vie"]').show(); // show just Korean text (you can change it)
+      $('#lang-switch').change(function () { // put onchange event when user select option from select
+         var lang = $(this).val(); // decide which language to display using switch case. The rest is obvious (i think)
+switch (lang) {
+case 'en':
+$('[lang]').hide();
+$('[lang="en"]').show();
+break;
+case 'vie':
+$('[lang]').hide();
+$('[lang="vie"]').show();
+break;
+default:
+$('[lang]').hide();
+$('[lang="vie"]').show();
+}
+});
 </script>
+</body>
 </html>
