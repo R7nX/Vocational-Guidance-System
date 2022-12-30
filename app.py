@@ -1,33 +1,72 @@
 # pip install numpy --upgrade
-from flask import Flask, render_template, request  # create virtualenv to install Flask
+from sqlite3 import dbapi2
+from flask import Flask, render_template, url_for, request, session, redirect,flash  # create virtualenv to install Flask
 import numpy as np
 from tensorflow import keras
 from test import predictor
-
+from flask_pymongo import PyMongo, MongoClient  # pip install Flask pymongo
 import yaml  # pip install pyyaml, store MYSQL account at other file
+import bcrypt
 
 Personality_label = ['ENFJ', 'ENFP', 'ENTJ', 'ENTP', 'ESFJ', 'ESFP', 'ESTJ', 'ESTP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ','ISFP', 'ISTJ', 'ISTP'] 
-from flask_pymongo import PyMongo, MongoClient  # pip install Flask pymongo
-
 
 app = Flask(__name__)
-model = keras.models.load_model(r'C:\Users\A.Phuc\Desktop\NCKH\Vocational-Guidance-System\models\final.h5')  # copy relative path
+model = keras.models.load_model(r'/Users/thien/Desktop/NCKH/Tensorflow/Vocational-Guidance-System/models/final.h5')  # copy relative path
 
 # take the uri from yaml file
-with open(r'C:\Users\A.Phuc\Desktop\NCKH\Vocational-Guidance-System\db.yaml') as file: #copy relative path
+with open(r'/Users/thien/Desktop/NCKH/Tensorflow/Vocational-Guidance-System/db.yaml') as file: #copy relative path
     dbpass=yaml.load(file, Loader=yaml.FullLoader)
     app.config['MONGO_URI'] = dbpass['uri']
+    app.config['SECRET_KEY'] = 'daddylovecshublmao!123'
 client = MongoClient(app.config['MONGO_URI'])
-# define the database name test_database
+
+# define the database name 
 db = client.test_database
+
 # setup mongodb
 mongo = PyMongo(app)
 
 
-@app.route('/', methods=['GET', 'POST'])  # homepage
+@app.route('/')
 def index():
-    return render_template('homepage.html')
+    to_render = 'homepage2.html'
+    if 'Email' in session:
+        flash(session['username'], category='Success')
+        to_render = 'homepage.html'
+    return render_template(to_render)
 
+@app.route('/layout')
+def layout():
+    return render_template('login.html')
+
+@app.route('/login', methods=['POST'])
+def login():
+    users = mongo.db.users
+    login_user = users.find_one({'Email': request.form['email']}) #boolean
+    if login_user: #check if password match
+        if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password']) == login_user['password']:
+            session['username'] = request.form['username']
+            session['Email'] = request.form['email']
+            return redirect(url_for('index'))
+    return 'Invalid username/password combination'
+
+
+@app.route('/register', methods=['POST', 'GET'])
+def register():
+    if request.method == 'POST':
+        users = mongo.db.users
+        existing_user = users.find_one({'Email': request.form['email']})
+
+        if existing_user is None:
+            hashpass = bcrypt.hashpw(request.form['pass'].encode('utf-8'), bcrypt.gensalt())
+            users.insert_one({'Email': request.form['email'],'name': request.form['username'], 'password': hashpass})
+            session['username'] = request.form['username']
+            session['Email'] = request.form['email']
+            return redirect(url_for('index'))
+
+        return 'That username already exists!'
+
+    return render_template('register.html')
 
 @app.route('/contact')  # contact
 def contact():
