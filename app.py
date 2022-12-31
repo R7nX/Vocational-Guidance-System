@@ -106,9 +106,3 @@ def predict():  # listing temporary career groups(wait for career's list of teac
     # đổi cỡ chữ intro 
     return render_template('result.html', prediction_text='Nhóm tính cách của bạn là {}'.format(Personality_types_predict), jobs=Career_predict)
 
-
-def main():
-    app.run(host='0.0.0.0', port=7500, debug=True)
-
-if __name__ == "__main__":
-    main()
