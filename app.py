@@ -11,10 +11,10 @@ import bcrypt
 Personality_label = ['ENFJ', 'ENFP', 'ENTJ', 'ENTP', 'ESFJ', 'ESFP', 'ESTJ', 'ESTP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ','ISFP', 'ISTJ', 'ISTP'] 
 
 app = Flask(__name__)
-model = keras.models.load_model(r'/Users/thien/Desktop/NCKH/Tensorflow/Vocational-Guidance-System/models/final.h5')  # copy relative path
+model = keras.models.load_model(r'C:\Users\A.Phuc\Desktop\NCKH\myproject\models\final.h5')  # copy relative path
 
 # take the uri from yaml file
-with open(r'/Users/thien/Desktop/NCKH/Tensorflow/Vocational-Guidance-System/db.yaml') as file: #copy relative path
+with open(r'C:\Users\A.Phuc\Desktop\NCKH\myproject\db.yaml') as file: #copy relative path
     dbpass=yaml.load(file, Loader=yaml.FullLoader)
     app.config['MONGO_URI'] = dbpass['uri']
     app.config['SECRET_KEY'] = 'daddylovecshublmao!123'
@@ -107,5 +107,8 @@ def predict():  # listing temporary career groups(wait for career's list of teac
     return render_template('result.html', prediction_text='Nhóm tính cách của bạn là {}'.format(Personality_types_predict), jobs=Career_predict)
 
 
+def main():
+    app.run(host='0.0.0.0', port=7500, debug=True)
+
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=7500, debug=True)  # if it does not work, change the port
+    main()
