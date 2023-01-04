@@ -1,5 +1,4 @@
 # pip install numpy --upgrade
-from sqlite3 import dbapi2
 from flask import Flask, render_template, url_for, request, session, redirect,flash  # create virtualenv to install Flask
 import numpy as np
 from tensorflow import keras
@@ -11,10 +10,10 @@ import bcrypt
 Personality_label = ['ENFJ', 'ENFP', 'ENTJ', 'ENTP', 'ESFJ', 'ESFP', 'ESTJ', 'ESTP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ','ISFP', 'ISTJ', 'ISTP'] 
 
 app = Flask(__name__)
-model = keras.models.load_model(r'C:\Users\A.Phuc\Desktop\NCKH\myproject\models\final.h5')  # copy relative path
+model = keras.models.load_model(r'/Users/thien/Desktop/NCKH/Tensorflow/Vocational-Guidance-System/models/final.h5')  # copy relative path
 
 # take the uri from yaml file
-with open(r'C:\Users\A.Phuc\Desktop\NCKH\myproject\db.yaml') as file: #copy relative path
+with open(r'/Users/thien/Desktop/NCKH/Tensorflow/Vocational-Guidance-System/db.yaml') as file: #copy relative path
     dbpass=yaml.load(file, Loader=yaml.FullLoader)
     app.config['MONGO_URI'] = dbpass['uri']
     app.config['SECRET_KEY'] = 'daddylovecshublmao!123'
@@ -43,12 +42,12 @@ def layout():
 def login():
     users = mongo.db.users
     login_user = users.find_one({'Email': request.form['email']}) #boolean
-    if login_user: #check if password match
+    if login_user: #check if password match or user does not exist
         if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password']) == login_user['password']:
             session['username'] = request.form['username']
             session['Email'] = request.form['email']
             return redirect(url_for('index'))
-    return 'Invalid username/password combination'
+    return "Invalid username/password combination or You haven't registered yet"
 
 
 @app.route('/register', methods=['POST', 'GET'])
@@ -64,7 +63,7 @@ def register():
             session['Email'] = request.form['email']
             return redirect(url_for('index'))
 
-        return 'That username already exists!'
+        return 'That email already exists!'
 
     return render_template('register.html')
 
@@ -98,11 +97,9 @@ def predict():  # listing temporary career groups(wait for career's list of teac
                 data[f'Question {i}'] = request.form[f'question{i}']
             data['Predicted personality types']=Personality_types_predict
             data['Predicted career']=Career_predict
-            db.Response_value.insert_one(data)
+            db.users.insert_one(data)
     insert_data_into_mongo()
     # des lại background web, để câu hỏi ra giữa
     # 1 câu/ 1 trang, add hiệu ứng
-    # thêm icon vào contact
-    # đổi cỡ chữ intro 
     return render_template('result.html', prediction_text='Nhóm tính cách của bạn là {}'.format(Personality_types_predict), jobs=Career_predict)
 

@@ -45,7 +45,7 @@
     <br><br>
     <p class="intro"><centre></centre> Chào mừng bạn đến với Vocational Guidance! Đây là một phần mềm giúp bạn định hướng nghề nghiệp của mình.   </p>
     <a href="{{url_for('take_test')}}">
-      <button class="test" > Bắt đầu bú cu </button>
+      <button class="test" > Bắt đầu </button>
     </a>
   </span>
 
@@ -89,7 +89,7 @@
                         </div>
                     {% else %}
                         <div class="alert alert_success alter-dismissable fade show" role = "alert"> 
-                        {{ 'Bạn đã bú cu thành công dưới tên ' + message }} 
+                        {{ 'Bạn đã đăng nhập thành công dưới tên ' + message }} 
                         <button type = "button" class = "close" data-dismiss="alert">
                         <span aria-hidden="false">&times;</span> 
                         </button>
@@ -128,9 +128,9 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     $('[lang]').hide(); // hide all lang attributes on start.
-    $('[lang="vie"]').show(); // show just Korean text (you can change it)
-    $('#lang-switch').change(function () { // put onchange event when user select option from select
-        var lang = $(this).val(); // decide which language to display using switch case. The rest is obvious (i think)
+    $('[lang="vie"]').show(); // show just Vietnamese text (you can change it)
+    $('#lang-switch').change(function () { 
+        var lang = $(this).val(); 
         switch (lang) {
             case 'en':
                 $('[lang]').hide();

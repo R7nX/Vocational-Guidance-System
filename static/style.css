@@ -1,6 +1,7 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  
 }
 
 .bruh{
@@ -13,10 +14,13 @@ html, body {
 }
 .intro{
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", ; 
     font-size: 25px;
+    font-style: normal; 
+    font-variant: normal; 
+    line-height: 25px;
     text-align: center;
-  }
+  } 
 .close{
   position: absolute;
   top:50%;
@@ -31,10 +35,7 @@ html, body {
   font-size:25px;
 }
 
-  .a{
-    font-family: 'Times New Roman', Times, serif;
-    font-size:35px;
-    text-align: center;}
+
   .test {
       background-color:#D8C0A1;
       color:black(247, 128, 148);
@@ -65,7 +66,7 @@ html, body {
       text-align: center;
       padding: 100px;
       text-decoration: none;
-       font-family: Arial ;
+      font-family: Arial ;
       font-size: 30px;
       
     }
@@ -119,3 +120,11 @@ html, body {
       font-family: Arial, Helvetica, sans-serif;
       font-size:20px
     }
+    a{ 
+      font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", ; 
+      font-size: 18px;
+      font-style: normal; 
+      font-variant: normal; 
+      line-height: 23px;
+      text-align: center;
+    } 
