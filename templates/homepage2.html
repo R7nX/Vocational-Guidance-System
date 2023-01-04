@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href="/static/style.css">
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -18,6 +19,7 @@
       <div class="header">
         <h1>Vocational Guidance</h1>
       </div>
+    
     <div class="topnav">
         <a href="{{url_for('index')}}">Home</a>
         <a href="{{url_for('contact')}}">Contact</a>
@@ -29,6 +31,7 @@
       <label for="lang-switch">
         <span lang="vie"> Chọn ngôn ngữ</span>
         <span lang="en">Choose language</span>
+        
     </label>
     <select id="lang-switch">
         <option value="en">English</option>
@@ -36,14 +39,20 @@
     </select>
     <span lang="en">
       <br><br>
-      <p class="intro"><centre>Welcome to Vocational Guidance, where you can find your best-fit job! Please log in before taking the test. </centre> </p>
-      
+      <p class="intro"><centre>Welcome to Vocational Guidance, where you can find your best-fit job!</centre> </p>
+      <a href="{{url_for('take_test')}}">
+        <button class="test" >Take the test </button>
+      </a>
     </span>
   <span lang="vie">
     <br><br>
-    <p class="intro"><centre></centre> Chào mừng bạn đến với Vocational Guidance! Đây là một phần mềm giúp bạn định hướng nghề nghiệp của mình! Vui lòng đăng nhập trước khi bú cu   </p>
+    <p class="intro"><centre></centre> Chào mừng bạn đến với Vocational Guidance! Đây là một phần mềm giúp bạn định hướng nghề nghiệp của mình.   </p>
+    <a href="{{url_for('take_test')}}">
+      <button class="test" > Bắt đầu </button>
+    </a>
   </span>
 
+  <span lang="en">
   <div class="noti">
     {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %} 
@@ -57,7 +66,7 @@
                         </div>
                     {% else %}
                         <div class="alert alert_success alter-dismissable fade show" role = "alert"> 
-                        {{ message }} 
+                        {{ 'You have logged in as ' + message }} 
                         <button type = "button" class = "close" data-dismiss="alert">
                         <span aria-hidden="false">&times;</span> 
                         </button>
@@ -67,6 +76,33 @@
             {% endif %}
     {% endwith %} 
   </div>
+</span>
+
+<span lang="vie">
+  <div class="noti">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %} 
+                {% for category, message in messages %} 
+                    {% if category == 'Error' %}
+                        <div class="alert alert_danger alter-dismissable fade show" role = "alert"> 
+                        {{ message }}
+                        <button type = "button" class = "close" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span> 
+                        </button>
+                        </div>
+                    {% else %}
+                        <div class="alert alert_success alter-dismissable fade show" role = "alert"> 
+                        {{ 'Bạn đã đăng nhập thành công dưới tên ' + message }} 
+                        <button type = "button" class = "close" data-dismiss="alert">
+                        <span aria-hidden="false">&times;</span> 
+                        </button>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+    {% endwith %} 
+  </div>
+</span>
 
 
 </body>
@@ -75,12 +111,12 @@
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"
-    ></script>
+    ></>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"
-    ></script>
+    ></scrip>
     <script
       src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
