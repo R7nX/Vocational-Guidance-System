@@ -10,10 +10,13 @@ import bcrypt
 Personality_label = ['ENFJ', 'ENFP', 'ENTJ', 'ENTP', 'ESFJ', 'ESFP', 'ESTJ', 'ESTP', 'INFJ', 'INFP', 'INTJ', 'INTP', 'ISFJ','ISFP', 'ISTJ', 'ISTP'] 
 
 app = Flask(__name__)
-model = keras.models.load_model(r'/Users/thien/Desktop/NCKH/Tensorflow/Vocational-Guidance-System/models/final.h5')  # copy relative path
+
+
+model = keras.models.load_model(r'Vocational-Guidance-System/models/final.h5')  # copy relative path
 
 # take the uri from yaml file
-with open(r'/Users/thien/Desktop/NCKH/Tensorflow/Vocational-Guidance-System/db.yaml') as file: #copy relative path
+with open(r'Vocational-Guidance-System/db.yaml') as file: #copy relative path
+
     dbpass=yaml.load(file, Loader=yaml.FullLoader)
     app.config['MONGO_URI'] = dbpass['uri']
     app.config['SECRET_KEY'] = 'daddylovecshublmao!123'
