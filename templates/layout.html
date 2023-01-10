@@ -1,42 +1,58 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href="/static/style.css">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
+    <link rel= "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"
     />
     <link>
-    <title>Home page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    <script src="https://kit.fontawesome.com/cef8ec303d.js" crossorigin="anonymous"></script> <!-- icon -->
+    <title>Contact</title>
 </head>
-    <body class="bruh">
+
+    <body class="bruh">     
       <div class="header">
-        <h1>Vocational Guidance</h1>
-      </div>
+          <h1>Vocational Guidance</h1>
+        </div>
+  
     <div class="topnav">
         <a href="{{url_for('index')}}">Home</a>
         <a href="{{url_for('contact')}}">Contact</a>
-        <a href ="{{url_for('intro')}}"> Intro</a>
-        <a href ="{{url_for('layout')}}"> Login</a>
-        
+        <a href ="{{url_for('intro')}}">Intro</a>
+        <a href ="{{url_for('layout')}}">Login</a>      
     </div>
 
+      <script>
+window.onscroll = function() {scrollFunction()};
 
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
+      </script>
 
-    {% block body %}{% endblock %}
+<a id="phone">
+<i class="fa-solid fa-phone"></i>
+0909181045 or 036755100
+</a>
+<br>
 
-    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<a id="email">
+<i class="fa-solid fa-envelope"></i>
+daddylovecshub@gmail.com
+</a>
+<br>
+
+<a id="developers">
+<i class="fa-solid fa-user-secret"></i>
+Minh Thiện or Ryan Do
+</a>
 
 </body>
-
 </html>
