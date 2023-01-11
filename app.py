@@ -19,7 +19,7 @@ with open(r'C:\Users\A.Phuc\Desktop\NCKH\myproject\db.yaml') as file: #copy rela
 
     dbpass=yaml.load(file, Loader=yaml.FullLoader)
     app.config['MONGO_URI'] = dbpass['uri']
-    app.config['SECRET_KEY'] = 'daddylovecshublmao!123'
+    app.config['SECRET_KEY'] = dbpass['secret_key']
 client = MongoClient(app.config['MONGO_URI'])
 
 # define the database name 

@@ -1,3 +1,4 @@
 from App import app 
 if __name__ == "__main__":
-    app.run()  # use another(8000)
+    # app.run()  # web
+    app.run(host='0.0.0.0', port=7500, debug=True)
