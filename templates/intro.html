@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href="/static/style.css">
-    <title>Home page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"  crossorigin="anonymous"
+    />
+    <link>
+    <title>Intro</title>
 </head>
-    <body class="bruh">
-    
+
+    <body class="bruh">    
     <div class="header">
       <h1>Vocational Guidance</h1>
     </div>
@@ -17,11 +20,11 @@
         <a href="{{url_for('index')}}">Home</a>
         <a href="{{url_for('contact')}}">Contact</a>
         <a href ="{{url_for('intro')}}"> Intro</a>
-
+        <a href ="{{url_for('layout')}}"> Login</a>
     </div>
 
       <script>
- window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -41,21 +44,22 @@ function scrollFunction() {
       </select>
       <span lang="en">
         <br><br>
-        <p> This project attempts to create a system that provides a prospective career path for high schoolers. The project includes 2 sections: Myers-Briggs personality test(based on 16 Personalities) and the hobbies test to help you narrow down your career options. </p>
+        <p class="intro"> This project attempts to create a system that provides a prospective career path for high schoolers. The project includes 2 sections: Myers-Briggs personality test(based on 16 Personalities) and the hobbies test to help you narrow down your career options. 
+        </p>
 
       </span>
-       <span lang="vie">
+<span lang="vie">
     <br><br>
-    <p class="intro"><centre></centre> Dự án này tạo ra để hỗ trợ học sinh cấp 3 lựa chọn ngành nghề phù hợp của mình. Cụ thể, bài kiểm tra của Vocational Guidance dựa trên bài bài kiểm tra Myers–Briggs(bài kiểm tra 16 nhóm tính cách) kết hợp với một bài kiểm tra khác về sở thích để giúp bạn tìm được nghề nghiệp phù hợp với mình
+    <p class="intro"> Dự án này tạo ra để hỗ trợ học sinh cấp 3 lựa chọn ngành nghề phù hợp của mình. Cụ thể, bài kiểm tra của Vocational Guidance dựa trên bài bài kiểm tra Myers–Briggs(bài kiểm tra 16 nhóm tính cách) kết hợp với một bài kiểm tra khác về sở thích để giúp bạn tìm được nghề nghiệp phù hợp với mình
     </p>
     
   </span>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     $('[lang]').hide(); // hide all lang attributes on start.
-    $('[lang="vie"]').show(); // show just Korean text (you can change it)
-    $('#lang-switch').change(function () { // put onchange event when user select option from select
-        var lang = $(this).val(); // decide which language to display using switch case. The rest is obvious (i think)
+    $('[lang="vie"]').show(); // show just Vietnamese text (you can change it)
+    $('#lang-switch').change(function () { 
+        var lang = $(this).val(); 
         switch (lang) {
             case 'en':
                 $('[lang]').hide();

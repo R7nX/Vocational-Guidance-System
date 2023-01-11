@@ -21,7 +21,7 @@ pip install -r requirements.txt
 ```
 
 
-To start the application, run the [app.py](app.py) file. 
+To start the application, run the [wsgi.py](wsgi.py) file. 
 ## Contribution
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
