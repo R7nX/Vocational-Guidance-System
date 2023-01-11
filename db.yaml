@@ -1,2 +1,2 @@
 uri: "your mongodb link" #connect to AWS server 54.250.144.103, port: 27017, database name: test_database
-secret_key: "daddylovecshublmao!123"
+secret_key: "your secret key"
