@@ -1,158 +1,191 @@
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
 }
-.header{
+.header {
   background-color: #f1f1f1;
-padding: 20px;
-text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
-a{ 
+a {
   font-family: Arial;
   /* font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", ;  */
   font-size: 20px;
-  font-style: normal; 
-  font-variant: normal; 
+  font-style: normal;
+  font-variant: normal;
   line-height: 23px;
   text-align: center;
   text-decoration: none;
-} 
-
-.bruh{
-  background-image: url(cover.jpg);
+}
+.row {
+  display: flex;
+  height: 75%;
+  align-items: center;
+}
+.col {
+  flex-basis: 40%;
+}
+.nav-links {
+  list-style: none;
+}
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+.nav-links li a:hover {
+  color: goldenrod;
+}
+.bruh {
+  width: 100%;
+  height: 100vh;
+  background-image: url(background.png);
+  background-position: center;
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+  /* background-image: url(background.png);
   background-size: cover;
   width: 100%;
   height: 100vh;
   resize: inline;
-  overflow: scroll;
+  overflow: scroll; */
 }
 
-.close{
+.close {
   position: absolute;
-  top:50%;
+  top: 50%;
   right: 20;
   border-color: #f44336;
-  color: red;
+  color: white;
   width: 30px;
   transform: translateY(-50%);
 }
 
-.noti{
+.noti {
   text-align: center;
-  font-size:25px;
+  font-size: 25px;
+  color: white;
 }
-
 
 .test {
-    background-color:#D8C0A1;
-    color:black(247, 128, 148);
-    border: #D8976D;
-    height: 50px;
-    width: 150px;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 2px;
-    cursor: pointer;
-    text-align: center;
-    margin-left: 650px;
-    
+  background-color: #d8c0a1;
+  color: black(247, 128, 148);
+  border: #d8976d;
+  height: 50px;
+  width: 150px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 650px;
 }
-  .navbar {
-      background-color: white; /* Black background color */
-      position: fixed; /* Make it stick/fixed */
-      top: -50px; /* Hide the navbar 50 px outside of the top view */
-      width: 100%; /* Full width */
-      transition: top 0.3s; /* Transition effect when sliding down (and up) */
-    }
-    
-    /* Style the navbar links */
-  .navbar{
-      float: center;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 100px;
-      text-decoration: none;
-      font-family: Arial ;
-      font-size: 30px;
-      
-    }
-    
-  .navbar :hover {
-      background-color: #ddd;
-      color: black;
-      box-sizing: border-box;     
-      }
+.logo {
+  width: 50px;
+  cursor: pointer;
+}
+.navbar {
+  background-color: white; /* Black background color */
+  position: fixed; /* Make it stick/fixed */
+  top: -50px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
 
-    body {
-      margin: 0;
-    }
+/* Style the navbar links */
+.navbar {
+  float: center;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 100px;
+  text-decoration: none;
+  font-family: Arial;
+  font-size: 30px;
+}
 
+.navbar :hover {
+  background-color: #ddd;
+  color: black;
+  box-sizing: border-box;
+}
 
-    /* Style the top navigation bar */
-    .topnav {
-      overflow: hidden;
-      background-color: #333;
-    }
-    
-    /* Style the topnav links */
-    .topnav a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      transition: all 0.3s;
-      border-right: 1.5px solid black;
-      min-width: 100px;
-    }
-    
-    /* Change color on hover */
-    .topnav a:hover {
-      background-color: #222222;
-      cursor: pointer;
-      color: white;
-      animation: topnavhover_Animation;
-      text-decoration: none;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-    }
+body {
+  margin: 0;
+}
 
-    @keyframes topnavhover_Animation{
-      50%{text-shadow: 0px 0px 10px yellow;}
-    }
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
 
- 
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: all 0.3s;
+  border-right: 1.5px solid black;
+  min-width: 100px;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #222222;
+  cursor: pointer;
+  color: white;
+  animation: topnavhover_Animation;
+  text-decoration: none;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes topnavhover_Animation {
+  50% {
+    text-shadow: 0px 0px 10px yellow;
+  }
+}
+
 /*contact.html*/
-.fa-phone{
+.fa-phone {
   font-size: 20px;
   margin: 20px 0px 10px 10px;
 }
-.fa-envelope{
+.fa-envelope {
   font-size: 20px;
   margin: 10px 0px 10px 10px;
 }
-.fa-user-secret{
+.fa-user-secret {
   font: Arial;
   font-size: 20px;
   margin: 10px 0px 10px 10px;
 }
-#phone, #email, #developers{
+#phone,
+#email,
+#developers {
   font-size: 25px;
-  font:Arial;
+  font: Arial;
 }
 
 /*intro.html*/
-.intro{
+.intro {
   color: black;
   text-align: auto;
   font-family: Arial;
   /* font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", ;  */
   font-size: 25px;
-  line-height: 25px; 
+  line-height: 25px;
   margin-left: 10px;
   text-align: center;
-} 
+}
